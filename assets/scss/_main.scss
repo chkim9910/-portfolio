@@ -1,8 +1,6 @@
 .sect1 {
+  overflow: hidden;
   position: relative;
-  .inner {
-    padding: 0 80px;
-  }
   .title {
     position: relative;
     top: 0;
@@ -16,7 +14,7 @@
     font-size: 220px;
     line-height: 86%;
     position: absolute;
-    top: -25px;
+    top: -35px;
     left: -21px;
   }
 
@@ -31,7 +29,7 @@
     // height: 150px;
     display: flex;
     justify-content: space-between;
-    margin-top: 260px;
+    margin-top: 150px;
   }
   .name {
     color: $secondary;
@@ -56,13 +54,13 @@
       top: 110px;
       right: 140px;
       content: "";
-      width: 700px;
+      width: 36.458vw;
       height: 1px;
       background: rgb(239, 219, 180, 0.5);
     }
   }
   .sub-txt {
-    color: $secondary;
+    color: $primary;
     line-height: 25px;
     font-size: 25px;
     z-index: 0;
@@ -76,7 +74,7 @@
   .line-1 {
     transform: rotate(90deg);
     top: 180px;
-    left: -713px;
+    left: -9.01vw;
   }
   .line-2 {
     top: 50px;
@@ -87,4 +85,12 @@
     top: 180px;
     left: 587px;
   }
+  .line-4 {
+    transform: rotate(90deg);
+    top: 180px;
+    left: -650px;
+  }
+}
+.sect2 {
+  background: $primary;
 }

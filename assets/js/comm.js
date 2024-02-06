@@ -8,7 +8,7 @@ $(function () {
     navigation: true,
 
     scrollingSpeed: 700,
-    autoScrolling: true,
+    // autoScrolling: true,
     fitToSection: true,
 
     // 접근성

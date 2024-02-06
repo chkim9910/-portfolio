@@ -282,6 +282,7 @@ legend {
 }
 
 body {
+  overflow: hidden;
   font-family: "Pretendard Variable", "Noto Sans KR", sans-serif;
 }
 
@@ -290,15 +291,24 @@ body {
   background: #000;
 }
 
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .fp-table {
   display: block;
 }
 
-.sect1 {
-  position: relative;
+.fp-is-overflow .fp-overflow.fp-auto-height-responsive,
+.fp-is-overflow .fp-overflow.fp-auto-height,
+.fp-is-overflow > .fp-overflow {
+  overflow: hidden;
 }
-.sect1 .inner {
-  padding: 0 80px;
+
+.sect1 {
+  overflow: hidden;
+  position: relative;
 }
 .sect1 .title {
   position: relative;
@@ -313,7 +323,7 @@ body {
   font-size: 220px;
   line-height: 86%;
   position: absolute;
-  top: -25px;
+  top: -35px;
   left: -21px;
 }
 .sect1 .sub-tit {
@@ -326,7 +336,7 @@ body {
 .sect1 .box {
   display: flex;
   justify-content: space-between;
-  margin-top: 260px;
+  margin-top: 150px;
 }
 .sect1 .name {
   color: #efdbb4;
@@ -352,12 +362,12 @@ body {
   top: 110px;
   right: 140px;
   content: "";
-  width: 700px;
+  width: 36.458vw;
   height: 1px;
   background: rgba(239, 219, 180, 0.5);
 }
 .sect1 .sub-txt {
-  color: #efdbb4;
+  color: #fe3f72;
   line-height: 25px;
   font-size: 25px;
   z-index: 0;
@@ -371,7 +381,7 @@ body {
 .sect1 .line-1 {
   transform: rotate(90deg);
   top: 180px;
-  left: -713px;
+  left: -9.01vw;
 }
 .sect1 .line-2 {
   top: 50px;
@@ -381,4 +391,13 @@ body {
   transform: rotate(90deg);
   top: 180px;
   left: 587px;
+}
+.sect1 .line-4 {
+  transform: rotate(90deg);
+  top: 180px;
+  left: -650px;
+}
+
+.sect2 {
+  background: #fe3f72;
 }/*# sourceMappingURL=comm.css.map */

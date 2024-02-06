@@ -1,14 +1,24 @@
 @import "variables", "mixins", "fonts", "reset";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 body {
+  overflow: hidden;
   font-family: $font-family;
 }
 .section {
   height: 100vh;
   background: #000;
 }
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .fp-table {
   display: block;
+}
+.fp-is-overflow .fp-overflow.fp-auto-height-responsive,
+.fp-is-overflow .fp-overflow.fp-auto-height,
+.fp-is-overflow > .fp-overflow {
+  overflow: hidden;
 }
 
 @import "main";
