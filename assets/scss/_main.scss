@@ -1,15 +1,90 @@
-.slide-intro {
-  swiper-slide {
-    height: 300px;
-    background: $primary;
-    // pagination: $swiper-theme-color;
+.sect1 {
+  position: relative;
+  .inner {
+    padding: 0 80px;
   }
-}
-.slide-best {
-  swiper-slide {
-    height: 300px;
-    background: $gray-300;
+  .title {
+    position: relative;
+    top: 0;
+    left: -80px;
+    width: 1233px;
+    height: 424px;
+    z-index: 10;
+  }
+  .tit {
+    color: $primary;
+    font-size: 220px;
+    line-height: 86%;
+    position: absolute;
+    top: -25px;
+    left: -21px;
+  }
 
-    // pagination: $swiper-theme-color;
+  .sub-tit {
+    color: $secondary;
+    font-size: 120px;
+    position: absolute;
+    top: 112px;
+    left: 510px;
+  }
+  .box {
+    // height: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 260px;
+  }
+  .name {
+    color: $secondary;
+    font-size: 60px;
+    line-height: 66px;
+  }
+  .copyright {
+    color: $secondary;
+    line-height: 18px;
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  .sub-txt-box {
+    margin-right: 200px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 110px;
+      right: 140px;
+      content: "";
+      width: 700px;
+      height: 1px;
+      background: rgb(239, 219, 180, 0.5);
+    }
+  }
+  .sub-txt {
+    color: $secondary;
+    line-height: 25px;
+    font-size: 25px;
+    z-index: 0;
+  }
+  .line {
+    width: 100vw;
+    height: 1px;
+    background: rgb(239, 219, 180, 0.5);
+    position: absolute;
+  }
+  .line-1 {
+    transform: rotate(90deg);
+    top: 180px;
+    left: -713px;
+  }
+  .line-2 {
+    top: 50px;
+    left: 0;
+  }
+  .line-3 {
+    transform: rotate(90deg);
+    top: 180px;
+    left: 587px;
   }
 }
