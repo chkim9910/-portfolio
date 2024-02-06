@@ -1,0 +1,438 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url(../font/Poppins-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url(../fonts/Poppins-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url(../fonts/Poppins-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url(../fonts/Poppins-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url(../fonts/Poppins-Bold.woff) format("woff");
+}
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Noto Sans KR", sans-serif, "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #202020;
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .wrap {
+    max-width: none;
+  }
+}
+#header {
+  height: 70px;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#main {
+  flex-grow: 1;
+}
+
+#footer {
+  height: 70px;
+}
+
+@media screen and (min-width: 1280px) {
+  .inner {
+    padding: 0;
+  }
+}
+#logo {
+  position: relative;
+  z-index: 1100;
+}
+
+#header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 70px;
+  background-color: #9e9e9e;
+}
+
+.col-right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.util ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.util .link-g {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.util .link-g::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 40px;
+  height: 40px;
+}
+.util .link-lang::before {
+  content: "\f0ac";
+}
+.util .link-search::before {
+  content: "\f002";
+}
+.util .link-mypage::before {
+  content: "\f007";
+}
+
+.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(1) {
+  transform: translateY(3px) rotate(45deg);
+}
+.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(2) {
+  display: none;
+}
+.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(3) {
+  transform: translateY(-3px) rotate(-45deg);
+}
+.gnb-wrap .inp-burger:checked ~ #gnb {
+  left: 0;
+}
+
+.label-burger {
+  z-index: 1100;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+.label-burger .bar {
+  width: 20px;
+  height: 2px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.inp-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  bottom: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#gnb {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  padding-top: 100px;
+  transition: left 0.2s;
+}
+
+.util {
+  display: none;
+}
+
+.slide-intro swiper-slide {
+  height: 300px;
+  background: #f43636;
+}
+
+.slide-best swiper-slide {
+  height: 300px;
+  background: #e0e0e0;
+}/*# sourceMappingURL=comm.css.map */

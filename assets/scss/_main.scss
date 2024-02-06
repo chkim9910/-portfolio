@@ -1,0 +1,15 @@
+.slide-intro {
+  swiper-slide {
+    height: 300px;
+    background: $primary;
+    // pagination: $swiper-theme-color;
+  }
+}
+.slide-best {
+  swiper-slide {
+    height: 300px;
+    background: $gray-300;
+
+    // pagination: $swiper-theme-color;
+  }
+}
