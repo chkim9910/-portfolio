@@ -11,13 +11,15 @@ body {
 .inner {
   max-width: 1280px;
   margin: 0 auto;
+  height: 100vh;
 }
 .fp-table {
   display: block;
 }
-.fp-is-overflow .fp-overflow.fp-auto-height-responsive,
-.fp-is-overflow .fp-overflow.fp-auto-height,
-.fp-is-overflow > .fp-overflow {
+// .fp-is-overflow .fp-overflow.fp-auto-height-responsive,
+// .fp-is-overflow .fp-overflow.fp-auto-height,
+/* .fp-is-overflow >  */
+.fp-overflow {
   overflow: hidden;
 }
 

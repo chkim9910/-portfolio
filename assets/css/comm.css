@@ -294,15 +294,15 @@ body {
 .inner {
   max-width: 1280px;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .fp-table {
   display: block;
 }
 
-.fp-is-overflow .fp-overflow.fp-auto-height-responsive,
-.fp-is-overflow .fp-overflow.fp-auto-height,
-.fp-is-overflow > .fp-overflow {
+/* .fp-is-overflow >  */
+.fp-overflow {
   overflow: hidden;
 }
 
@@ -320,28 +320,46 @@ body {
 }
 .sect1 .tit {
   color: #fe3f72;
-  font-size: 220px;
+  font-size: 200px;
   line-height: 86%;
   position: absolute;
-  top: -35px;
-  left: -21px;
+  top: 200px;
+  right: -205px;
+}
+.sect1 .tit-2 {
+  color: #fe3f72;
+  font-size: 180px;
+  line-height: 86%;
+  position: absolute;
+  bottom: -130px;
+  right: -204px;
 }
 .sect1 .sub-tit {
-  color: #efdbb4;
-  font-size: 120px;
+  color: rgba(239, 219, 180, 0.6);
+  font-size: 100px;
+  font-family: "Allura", cursive;
   position: absolute;
-  top: 112px;
-  left: 510px;
+  bottom: -200px;
+  right: -170px;
 }
 .sect1 .box {
+  width: 1000px;
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
+  margin-top: -150px;
+  margin-left: 50px;
+}
+.sect1 .name-upper {
+  color: #efdbb4;
+  font-size: 19px;
+  line-height: 40px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
 }
 .sect1 .name {
   color: #efdbb4;
-  font-size: 60px;
-  line-height: 66px;
+  font-size: 55px;
+  line-height: 60px;
 }
 .sect1 .copyright {
   color: #efdbb4;
@@ -352,22 +370,23 @@ body {
   right: 40px;
 }
 .sect1 .sub-txt-box {
-  margin-right: 200px;
+  margin-top: 60px;
+  margin-right: 220px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 }
 .sect1 .sub-txt-box:before {
   position: absolute;
-  top: 110px;
-  right: 140px;
+  top: 50px;
+  right: 170px;
   content: "";
-  width: 36.458vw;
+  width: 23vw;
   height: 1px;
   background: rgba(239, 219, 180, 0.5);
 }
 .sect1 .sub-txt {
-  color: #fe3f72;
+  color: #efdbb4;
   line-height: 25px;
   font-size: 25px;
   z-index: 0;
@@ -375,13 +394,12 @@ body {
 .sect1 .line {
   width: 100vw;
   height: 1px;
-  background: rgba(239, 219, 180, 0.5);
+  background: rgba(239, 219, 180, 0.25);
   position: absolute;
 }
 .sect1 .line-1 {
-  transform: rotate(90deg);
-  top: 180px;
-  left: -9.01vw;
+  top: 730px;
+  left: 0vw;
 }
 .sect1 .line-2 {
   top: 50px;
@@ -390,7 +408,7 @@ body {
 .sect1 .line-3 {
   transform: rotate(90deg);
   top: 180px;
-  left: 587px;
+  left: 405px;
 }
 .sect1 .line-4 {
   transform: rotate(90deg);
