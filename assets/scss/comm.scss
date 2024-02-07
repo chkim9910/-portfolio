@@ -1,5 +1,11 @@
 @import "variables", "mixins", "fonts", "reset";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+* {
+  cursor: none;
+}
+a {
+  cursor: none;
+}
 body {
   overflow: hidden;
   font-family: $font-family;
@@ -10,6 +16,7 @@ body {
 }
 .inner {
   max-width: 1280px;
+  max-height: 700px;
   margin: 0 auto;
   height: 100vh;
 }
@@ -21,6 +28,52 @@ body {
 /* .fp-is-overflow >  */
 .fp-overflow {
   overflow: hidden;
+}
+
+// .blinking-cursor {
+//   font-weight: 250;
+//   user-select: none;
+//   animation: blink 0.9s steps(1, start) infinite;
+// }
+// @keyframes blink {
+//   to {
+//     visibility: hidden;
+//   }
+// }
+
+// .blinking-cursor {
+//   font-weight: 250;
+//   font-size: 40px;
+//   color: #2e3d48;
+//   animation: blink 1s step-end infinite;
+// }
+
+// @keyframes blink {
+//   from,
+//   to {
+//     color: transparent;
+//   }
+//   50% {
+//     color: black;
+//   }
+// }
+
+.typewriter span {
+  display: none;
+  overflow: hidden;
+  animation: typing 2s steps(var(--chars)),
+    blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @import "main";

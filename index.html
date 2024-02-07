@@ -12,22 +12,25 @@
       href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/comm.css" />
+    <link rel="stylesheet" href="./assets/css/comm.css?ver=0.1" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="./assets/js/comm.js"></script>
   </head>
   <body>
     <div id="fullpage">
-      <div class="section sect1">
+      <div id="cursor-2" class="section sect1">
         <div class="inner">
           <div class="title">
             <!-- <h1 class="tit">
               Connect& <br />
               Extend
             </h1> -->
-            <h1 class="tit">Connect</h1>
-            <h1 class="tit-2">&Extend</h1>
+            <h1 class="tit">Solid&</h1>
+            <h1 class="tit-2">Aesthetic</h1>
+            <p class="copyright">&copy;CHOHYANG 2024 PORTFOLIO</p>
             <!-- <p class="sub-tit">the world</p> -->
           </div>
           <div class="box">
@@ -46,9 +49,6 @@
               </p>
             </div>
           </div>
-          <div class="copyright-box">
-            <p class="copyright">&copy;CHOHYANG 2024 PORTFOLIO</p>
-          </div>
         </div>
         <div class="bg">
           <div class="line line-1"></div>
@@ -57,18 +57,23 @@
           <div class="line line-4"></div>
         </div>
       </div>
-      <div class="section sect">
+      <div class="section sect2">
         <div class="inner">
-          <div class="txt-fst">
-            <p>코드로</p>
-            <p>[너와 내가 연결되고]</p>
-            <p>[우리의 세계를 넓혀가는]</p>
-            <p>경험을 선사합니다.</p>
+          <div id="text" class="txt-fst">
+            <!-- <span class="bracket-lt">[</span> -->
+            <!-- <span is="type-async" id="type-text"></span> -->
+            <span class="elem1">나의 가치를 창출하고</span> <br />
+            <span class="elem2 black">너의 가치를 발굴하며</span>
+            <span class="elem3">우리의 세상이 다채로워지는</span>
+            <span class="elem4 black">웹 퍼블리싱을 꿈꿉니다</span>
+            <span class="blinking-cursor">|</span>
+            <!-- <span class="bracket-rt">]</span> -->
+            <!-- <span class="next-after">경험을 선사합니다.</span> -->
           </div>
-          <div class="txt-sec">
-            <p>
+          <div class="txt-sec-box">
+            <p class="txt-sec">
               반갑습니다. <br />
-              웹퍼블리셔 김초향입니다.
+              웹퍼블리셔 <span class="highlight">김초향</span>입니다.
             </p>
           </div>
         </div>
@@ -127,6 +132,10 @@
           <div class="line line-2"></div>
         </div>
       </div>
+    </div>
+    <div class="curzr-big-circle" hidden>
+      <div class="circle"></div>
+      <div class="dot"></div>
     </div>
   </body>
 </html>
