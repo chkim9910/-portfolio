@@ -30,7 +30,11 @@ $(function () {
         // typing animation
         const text = document.getElementById("text");
         const typingDelay = 150;
-        displayText(text, typingDelay);
+        function onComplete() {
+          gsap.to("#text", { y: "50px", autoAlpha: 1, duration: 1 });
+        }
+
+        displayText(text, typingDelay, onComplete);
 
         function displayText(target, delay, callback, nodes, index = 0) {
           if (index === 0) {
@@ -65,11 +69,14 @@ $(function () {
           }
         }
 
+        // 텍스트가 타이핑 애니메이션이 모두 완료된 후에 실행될 함수
+        // gsap.set("#text", { y: "50px", autoAlpha: 0 });
+
         // gsap
         const secondText = document.getElementsByClassName("txt-sec-box");
         gsap.registerPlugin(ScrollTrigger);
         gsap.set(secondText, { autoAlpha: 0 });
-        gsap.to();
+        // gsap.to();
       }
     },
   });
