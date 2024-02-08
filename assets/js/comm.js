@@ -15,145 +15,68 @@ $(function () {
     keyboardScrolling: true,
     animateAnchor: true,
     recordHistory: true,
+
+    // page setting
+    anchors: ["sect1", "sect2", "sect3", "sect4"],
+
+    // 섹션을 스크롤하거나 화면에 들어왔을 때 실행되는 콜백
+    afterLoad: function (origin, destination, direction) {
+      // destination.item이 현재 섹션을 나타냅니다.
+      // 원하는 섹션에 대한 조건을 설정하여 해당 섹션이 화면에 들어왔을 때 동작을 수행합니다.
+      if (destination.index == 1) {
+        // 두 번째 섹션이 화면에 들어왔을 때 실행할 코드를 작성합니다.
+        console.log("두 번째 섹션이 화면에 들어옵니다!");
+
+        // typing animation
+        const text = document.getElementById("text");
+        const typingDelay = 150;
+        displayText(text, typingDelay);
+
+        function displayText(target, delay, callback, nodes, index = 0) {
+          if (index === 0) {
+            nodes = [].slice.call(target.children);
+            target.innerHTML = "";
+          }
+          const currentNode = nodes[index];
+          const currentNodeText = currentNode.innerHTML;
+
+          currentNode.innerHTML = "";
+          target.appendChild(currentNode);
+
+          if (currentNodeText) {
+            let i = 0;
+            const cars = currentNodeText.split("");
+            const effect = setInterval(() => {
+              currentNode.innerHTML += cars[i];
+              i++;
+
+              if (i === cars.length) {
+                clearInterval(effect);
+
+                if (index < nodes.length - 1) {
+                  displayText(target, delay, callback, nodes, ++index);
+                }
+              }
+            }, delay);
+          } else {
+            if (index < nodes.length - 1) {
+              displayText(target, delay, callback, nodes, ++index);
+            }
+          }
+        }
+
+        // gsap
+        const secondText = document.getElementsByClassName("txt-sec-box");
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.set(secondText, { autoAlpha: 0 });
+        gsap.to();
+      }
+    },
   });
 
   // 1. sect2로 왔을 때 1초 delay를 준 후
   // 2. .first가 위로 사라지게 하고, .bracket-rt의 x값을 늘린 후, .next가 위로 올라와 보이게 함
   // 3. 다시 처음으로 돌아옴
-
-  // gsap.registerPlugin(ScrollTrigger);
-  // if (sect2) {
-  //   gsap.set([first, next], { autoAlpha: 0 });
-  // }
-
-  // typing animation
-
-  const text = document.getElementById("text");
-  const typingDelay = 100;
-  displayText(text, typingDelay);
-
-  function displayText(target, delay, callback, nodes, index = 0) {
-    if (index === 0) {
-      nodes = [].slice.call(target.children);
-      target.innerHTML = "";
-    }
-    const currentNode = nodes[index];
-    const currentNodeText = currentNode.innerHTML;
-
-    currentNode.innerHTML = "";
-    target.appendChild(currentNode);
-
-    if (currentNodeText) {
-      let i = 0;
-      const cars = currentNodeText.split("");
-      const effect = setInterval(() => {
-        currentNode.innerHTML += cars[i];
-        i++;
-
-        if (i === cars.length) {
-          clearInterval(effect);
-
-          if (index < nodes.length - 1) {
-            displayText(target, delay, callback, nodes, ++index);
-          } else {
-            callback();
-          }
-        }
-      }, delay);
-    } else {
-      if (index < nodes.length - 1) {
-        displayText(target, delay, callback, nodes, ++index);
-      } else {
-        callback();
-      }
-    }
-  }
-
-  // function displayText(target, delay, callback, nodes, index = 0) {
-  //   if (index === 0) {
-  //     nodes = [].slice.call(target.children);
-  //     target.innerHTML = "";
-  //   }
-  //   const currentNode = nodes[index];
-  //   const currentNodeText = currentNode.innerHTML;
-
-  //   currentNode.innerHTML = "";
-  //   target.appendChild(currentNode);
-
-  //   if (currentNodeText) {
-  //     let i = 0;
-  //     const cars = currentNodeText.split("");
-  //     const effect = setInterval(() => {
-  //       currentNode.innerHTML += cars[i];
-  //       i++;
-
-  //       if (i === cars.length) {
-  //         clearInterval(effect);
-
-  //         if (index < nodes.length - 1) {
-  //           displayText(target, delay, callback, nodes, ++index);
-  //         } else {
-  //           callback();
-  //         }
-  //       }
-  //     }, delay);
-  //   } else {
-  //     if (index < nodes.length - 1) {
-  //       displayText(target, delay, callback, nodes, ++index);
-  //     } else {
-  //       callback();
-  //     }
-  //   }
-  // }
-  // }
-
-  // async function init() {
-  //   const node = document.querySelector("#type-text");
-
-  //   await sleep(2000);
-  //   node.innerText = "";
-  //   // await node.type("Hello, ");
-
-  //   // while (true) {
-  //   await node.type("나의 가치를 창출하고");
-  //   await sleep(2500);
-  //   await node.delete("나의 가치를 창출하고");
-  //   await node.type("너의 가치를 발굴하며");
-  //   await sleep(2500);
-  //   await node.delete("너의 가치를 발굴하며");
-  //   await node.type("우리의 세상이 다채로워지는");
-  //   await sleep(2500);
-  //   await node.delete("우리의 세상이 다채로워지는");
-  //   await node.type("웹 퍼블리싱을 꿈꿉니다.");
-  //   await sleep(2500);
-  //   // await node.delete("웹 퍼블리싱을 꿈꿉니다.");
-  //   // }
-  // }
-
-  // const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
-
-  // class TypeAsync extends HTMLSpanElement {
-  //   get typeInterval() {
-  //     const randomMs = 150 * Math.random();
-  //     return randomMs < 50 ? 10 : randomMs;
-  //   }
-
-  //   async type(text) {
-  //     for (let character of text) {
-  //       this.innerText += character;
-  //       await sleep(this.typeInterval);
-  //     }
-  //   }
-
-  //   async delete(text) {
-  //     for (let character of text) {
-  //       this.innerText = this.innerText.slice(0, this.innerText.length - 3);
-  //       await sleep(this.typeInterval);
-  //     }
-  //   }
-  // }
-  // customElements.define("type-async", TypeAsync, { extends: "span" });
-  // init();
 
   // 커서
   class BigCircle {
