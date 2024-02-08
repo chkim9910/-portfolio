@@ -18,7 +18,8 @@ body {
   max-width: 1280px;
   max-height: 700px;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
 }
 .fp-table {
   display: block;
@@ -30,23 +31,8 @@ body {
   overflow: hidden;
 }
 
-.blinking-cursor {
-  display: inline;
-  text-align: center;
-  font-weight: 250;
-  font-size: 40px;
-  color: #2e3d48;
-  animation: 1s blink step-end infinite;
-}
-
-@keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+.highlight {
+  color: yellow;
 }
 
 @import "main";

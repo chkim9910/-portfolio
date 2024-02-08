@@ -28,17 +28,18 @@ $(function () {
         console.log("두 번째 섹션이 화면에 들어옵니다!");
 
         // typing animation
+        // function onComplete() {
+        //   gsap.to("#text", { y: "-50px", autoAlpha: 1, duration: 1 });
+        // }
         const text = document.getElementById("text");
         const typingDelay = 150;
-        function onComplete() {
-          gsap.to("#text", { y: "50px", autoAlpha: 1, duration: 1 });
-        }
-
+        gsap.registerPlugin(ScrollTrigger);
         displayText(text, typingDelay, onComplete);
 
         function displayText(target, delay, callback, nodes, index = 0) {
           if (index === 0) {
             nodes = [].slice.call(target.children);
+            // console.log(nodes);
             target.innerHTML = "";
           }
           const currentNode = nodes[index];
@@ -47,6 +48,7 @@ $(function () {
           currentNode.innerHTML = "";
           target.appendChild(currentNode);
 
+          // 만약 현재 노드의 내용이 있다면
           if (currentNodeText) {
             let i = 0;
             const cars = currentNodeText.split("");
@@ -57,6 +59,7 @@ $(function () {
               if (i === cars.length) {
                 clearInterval(effect);
 
+                // 만약 현재 노드가 마지막 노드가 아니라면 다음 노드 처리
                 if (index < nodes.length - 1) {
                   displayText(target, delay, callback, nodes, ++index);
                 }
@@ -66,24 +69,31 @@ $(function () {
             if (index < nodes.length - 1) {
               displayText(target, delay, callback, nodes, ++index);
             }
+            //텍스트가 타이핑 애니메이션이 모두 완료된 후 콜백함수 실행
+            else {
+              if (callback) {
+                callback();
+                console.log("실행완료");
+              }
+            }
           }
         }
 
         // 텍스트가 타이핑 애니메이션이 모두 완료된 후에 실행될 함수
-        // gsap.set("#text", { y: "50px", autoAlpha: 0 });
-
-        // gsap
         const secondText = document.getElementsByClassName("txt-sec-box");
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.set(secondText, { autoAlpha: 0 });
-        // gsap.to();
+        const bgCircle = document.getElementsByClassName("bg-circle");
+        gsap.set(secondText, { y: 50, autoAlpha: 0 });
+
+        function onComplete() {
+          console.log("콜백 함수가 실행되었습니다.");
+          const tl = gsap.timeline();
+          tl.to(text, { y: -50, autoAlpha: 0, duration: 1, delay: 0.5 })
+            .to(bgCircle, { scale: 50, duration: 2, ease: "power2.out" })
+            .to(secondText, { y: 0, autoAlpha: 1, duration: 1 });
+        }
       }
     },
   });
-
-  // 1. sect2로 왔을 때 1초 delay를 준 후
-  // 2. .first가 위로 사라지게 하고, .bracket-rt의 x값을 늘린 후, .next가 위로 올라와 보이게 함
-  // 3. 다시 처음으로 돌아옴
 
   // 커서
   class BigCircle {
