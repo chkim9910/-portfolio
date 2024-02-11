@@ -4,7 +4,8 @@
   display: flex;
   .title {
     position: relative;
-    top: 125px;
+    top: 100px;
+    // top: 125px;
     right: 0;
     // right: -80px;
     width: 100%;
@@ -12,21 +13,87 @@
     z-index: 10;
   }
   .tit {
-    color: $primary;
+    &:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 1px $primary;
+    }
+    &:nth-child(2) {
+      color: transparent;
+      // color: $primary;
+      animation: animate 3s ease-in-out infinite;
+      // background: linear-gradient(to right, $primary, purple);
+      // background: $primary;
+      // background-clip: text;
+      // background-size: 100%;
+    }
+    // color: $primary;
     font-size: 200px;
     line-height: 86%;
     position: absolute;
     top: 220px;
-    // right: 0;
     right: 405px;
+    // animation: half 1s infinite;
+    // right: 0;
     // right: -15px;
     // top: 70px;
     // left: -5px;
     // top: -35px;
     // left: -21px;
   }
+  @keyframes animate {
+    0%,
+    100% {
+      background: linear-gradient(to right, $primary, $secondary);
+      background-clip: text;
+    }
+  }
+  // @keyframes animate {
+  //   0%,
+  //   100% {
+  //     clip-path: polygon(
+  //       0% 60%,
+  //       16% 48%,
+  //       33% 50%,
+  //       54% 65%,
+  //       70% 60%,
+  //       84% 59%,
+  //       100% 70%,
+  //       100% 100%,
+  //       0% 100%
+  //     );
+  //   }
+
+  //   50% {
+  //     clip-path: polygon(
+  //       0% 60%,
+  //       15% 65%,
+  //       34% 80%,
+  //       51% 50%,
+  //       67% 40%,
+  //       84% 45%,
+  //       100% 70%,
+  //       100% 100%,
+  //       0% 100%
+  //     );
+  //   }
+  // }
   .tit-2 {
-    color: $primary;
+    &:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 2px $primary;
+    }
+    &:nth-child(2) {
+      color: transparent;
+      // color: $primary;
+      animation: animate 3s ease-in-out infinite alternate 1s;
+      // background: linear-gradient(to right, $primary, purple);
+      background: $primary;
+      background-clip: text;
+      background-size: 0%;
+    }
+    // color: transparent;
+    // -webkit-text-stroke-color: $primary;
+    // -webkit-text-stroke: 1px $primary;
     font-size: 180px;
     line-height: 86%;
     position: absolute;
@@ -34,6 +101,17 @@
     right: 0;
     // right: -14px;
   }
+  // @keyframes animate {
+  //   0% {
+  //     // clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+  //     clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  //     background-size: 0%;
+  //   }
+  //   100% {
+  //     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  //     background-size: 100%;
+  //   }
+  // }
   .sub-tit {
     color: rgb(239, 219, 180, 0.6);
     font-size: 100px;
@@ -46,7 +124,8 @@
     width: 1000px;
     display: flex;
     justify-content: space-between;
-    margin-top: -1.388vw;
+    margin-top: -3.388vw;
+    // margin-top: -1.388vw;
     position: relative;
     z-index: 20;
     // margin-left: 50px;
@@ -125,13 +204,6 @@
     font-weight: 700;
     z-index: 0;
   }
-
-  .line {
-    width: 100vw;
-    height: 1px;
-    background: rgb(239, 219, 180, 0.25);
-    position: absolute;
-  }
   .line-1 {
     // transform: rotate(90deg);
     top: 730px;
@@ -162,6 +234,7 @@
 .sect2 {
   display: flex;
   background: $primary;
+
   .inner {
     max-width: 100vw;
     min-height: 100vh;
@@ -169,7 +242,11 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
+    opacity: 0;
     // align-items: center;
+    &.show {
+      opacity: 1;
+    }
   }
   .txt-fst {
     display: inline;
@@ -197,11 +274,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
   }
   .txt-sec {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 800;
-    color: $secondary;
+    color: $primary;
+    // color: $black;
+  }
+  .em-heartbeat {
+    font-size: 40px;
   }
   #type-text {
     color: $white;
@@ -214,5 +296,45 @@
     height: 100px;
     border-radius: 50%;
     background: $black;
+  }
+}
+.sect3 {
+  position: relative;
+  .wrapper {
+    margin-top: 100px;
+    justify-content: space-evenly;
+  }
+  .pic {
+    width: 300px;
+    height: 410px;
+    background: #ddd;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+  }
+  .name {
+    font-size: 20px;
+    color: $white;
+  }
+  .txt {
+    font-size: 16px;
+    color: $white;
+    strong {
+      color: $secondary;
+    }
+    span {
+      display: block;
+    }
+  }
+  .intro {
+    font-size: 16px;
+    color: $secondary;
+  }
+}
+.sect4 {
+  .title {
+    left: 0;
   }
 }
