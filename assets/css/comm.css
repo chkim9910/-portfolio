@@ -394,45 +394,39 @@ body {
   z-index: 10;
 }
 .sect1 .tit {
-  font-size: 200px;
-  line-height: 86%;
+  color: transparent;
+  background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg) no-repeat 50% 50%/100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation: gradient-animation 16s ease-in-out infinite alternate;
   position: absolute;
-  top: 220px;
-  right: 405px;
+  top: 116px;
+  left: 0;
 }
-.sect1 .tit:nth-child(1) {
-  color: transparent;
-  -webkit-text-stroke: 1px #fe3f72;
+.sect1 .tit span {
+  font-size: 250px;
+  letter-spacing: -10px;
 }
-.sect1 .tit:nth-child(2) {
-  color: transparent;
-  animation: animate 3s ease-in-out infinite;
-}
-@keyframes animate {
-  0%, 100% {
-    background: linear-gradient(to right, #fe3f72, #efdbb4);
-    -webkit-background-clip: text;
-            background-clip: text;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 80%;
+  }
+  50% {
+    background-position: 80% 30%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }
 .sect1 .tit-2 {
-  font-size: 180px;
-  line-height: 86%;
+  color: #fe3f72;
   position: absolute;
-  bottom: -130px;
+  top: 280px;
   right: 0;
+  letter-spacing: -4px;
 }
-.sect1 .tit-2:nth-child(1) {
-  color: transparent;
-  -webkit-text-stroke: 2px #fe3f72;
-}
-.sect1 .tit-2:nth-child(2) {
-  color: transparent;
-  animation: animate 3s ease-in-out infinite alternate 1s;
-  background: #fe3f72;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-size: 0%;
+.sect1 .tit-2 span {
+  font-size: 180px;
 }
 .sect1 .sub-tit {
   color: rgba(239, 219, 180, 0.6);
@@ -446,7 +440,7 @@ body {
   width: 1000px;
   display: flex;
   justify-content: space-between;
-  margin-top: -3.388vw;
+  margin-top: 7.612vw;
   position: relative;
   z-index: 20;
 }
@@ -562,10 +556,29 @@ body {
 .sect2 .txt-sec {
   font-size: 45px;
   font-weight: 800;
-  color: #fe3f72;
+  color: transparent;
+  background: url(../img/5160549.jpg) no-repeat 100% 10%/100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation: gradient-animation2 16s ease-in-out infinite alternate;
 }
-.sect2 .em-heartbeat {
+@keyframes gradient-animation2 {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 30%;
+  }
+  100% {
+    background-position: 30% 80%;
+  }
+}
+.sect2 .em-butterfly {
   font-size: 40px;
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  transform: rotate(45deg);
 }
 .sect2 #type-text {
   color: #fff;

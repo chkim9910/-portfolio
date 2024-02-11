@@ -13,105 +13,49 @@
     z-index: 10;
   }
   .tit {
-    &:nth-child(1) {
-      color: transparent;
-      -webkit-text-stroke: 1px $primary;
-    }
-    &:nth-child(2) {
-      color: transparent;
-      // color: $primary;
-      animation: animate 3s ease-in-out infinite;
-      // background: linear-gradient(to right, $primary, purple);
-      // background: $primary;
-      // background-clip: text;
-      // background-size: 100%;
-    }
-    // color: $primary;
-    font-size: 200px;
-    line-height: 86%;
+    // -webkit-text-stroke: 2px $primary;
+    color: transparent;
+    background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg)
+      no-repeat 50% 50% / 100%;
+    background-clip: text;
+    animation: gradient-animation 16s ease-in-out infinite alternate;
+    // line-height: 86%;
     position: absolute;
-    top: 220px;
-    right: 405px;
-    // animation: half 1s infinite;
-    // right: 0;
-    // right: -15px;
-    // top: 70px;
-    // left: -5px;
-    // top: -35px;
-    // left: -21px;
+    top: 116px;
+    // top: 86px;
+    // top: 120px;
+    left: 0;
+    span {
+      font-size: 250px;
+      // font-size: 300px;
+      letter-spacing: -10px;
+    }
   }
-  @keyframes animate {
-    0%,
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 80%;
+    }
+    50% {
+      background-position: 80% 30%;
+    }
     100% {
-      background: linear-gradient(to right, $primary, $secondary);
-      background-clip: text;
+      background-position: 100% 50%;
     }
   }
-  // @keyframes animate {
-  //   0%,
-  //   100% {
-  //     clip-path: polygon(
-  //       0% 60%,
-  //       16% 48%,
-  //       33% 50%,
-  //       54% 65%,
-  //       70% 60%,
-  //       84% 59%,
-  //       100% 70%,
-  //       100% 100%,
-  //       0% 100%
-  //     );
-  //   }
-
-  //   50% {
-  //     clip-path: polygon(
-  //       0% 60%,
-  //       15% 65%,
-  //       34% 80%,
-  //       51% 50%,
-  //       67% 40%,
-  //       84% 45%,
-  //       100% 70%,
-  //       100% 100%,
-  //       0% 100%
-  //     );
-  //   }
-  // }
   .tit-2 {
-    &:nth-child(1) {
-      color: transparent;
-      -webkit-text-stroke: 2px $primary;
-    }
-    &:nth-child(2) {
-      color: transparent;
-      // color: $primary;
-      animation: animate 3s ease-in-out infinite alternate 1s;
-      // background: linear-gradient(to right, $primary, purple);
-      background: $primary;
-      background-clip: text;
-      background-size: 0%;
-    }
-    // color: transparent;
-    // -webkit-text-stroke-color: $primary;
-    // -webkit-text-stroke: 1px $primary;
-    font-size: 180px;
-    line-height: 86%;
+    color: $primary;
+    // font-size: 180px;
+    // line-height: 86%;
     position: absolute;
-    bottom: -130px;
+    // bottom: -130px;
+    top: 280px;
     right: 0;
-    // right: -14px;
+    letter-spacing: -4px;
+    span {
+      font-size: 180px;
+    }
   }
-  // @keyframes animate {
-  //   0% {
-  //     // clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
-  //     clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
-  //     background-size: 0%;
-  //   }
-  //   100% {
-  //     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  //     background-size: 100%;
-  //   }
-  // }
+
   .sub-tit {
     color: rgb(239, 219, 180, 0.6);
     font-size: 100px;
@@ -124,7 +68,8 @@
     width: 1000px;
     display: flex;
     justify-content: space-between;
-    margin-top: -3.388vw;
+    margin-top: 7.612vw;
+    // margin-top: -3.388vw;
     // margin-top: -1.388vw;
     position: relative;
     z-index: 20;
@@ -279,12 +224,32 @@
   .txt-sec {
     font-size: 45px;
     font-weight: 800;
-    color: $primary;
+    // color: $primary;
+    color: transparent;
+    background: url(../img/5160549.jpg) no-repeat 100% 10% / 100%;
+    background-clip: text;
+    animation: gradient-animation2 16s ease-in-out infinite alternate;
     // color: $black;
   }
-  .em-heartbeat {
-    font-size: 40px;
+  @keyframes gradient-animation2 {
+    0% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 50% 30%;
+    }
+    100% {
+      background-position: 30% 80%;
+    }
   }
+  .em-butterfly {
+    font-size: 40px;
+    position: absolute;
+    top: -40px;
+    right: -60px;
+    transform: rotate(45deg);
+  }
+
   #type-text {
     color: $white;
   }

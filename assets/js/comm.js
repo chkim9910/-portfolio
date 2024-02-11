@@ -24,6 +24,62 @@ $(function () {
       // destination.item이 현재 섹션을 나타냅니다.
       // 원하는 섹션에 대한 조건을 설정하여 해당 섹션이 화면에 들어왔을 때 동작을 수행합니다.
       if (destination.index == 0) {
+        var line1 = $(".tit");
+        var line2 = $(".tit-2");
+
+        var line1Spans = $(".tit > span");
+        var line2Spans = $(".tit-2 > span");
+
+        // Set tweens
+        TweenMax.set([line1, line2], {
+          x: -15,
+        });
+        TweenMax.set([line1Spans, line2Spans], {
+          alpha: 0,
+        });
+
+        // Tween values
+        var tl = new TimelineMax({
+          repeat: 0,
+        });
+
+        tl.add(
+          TweenMax.to(line1, 1.5, {
+            x: 0,
+          }),
+          "start"
+        );
+
+        tl.add(
+          TweenMax.to(line2, 1.5, {
+            x: 0,
+          }),
+          "start+=1"
+        );
+
+        tl.add(
+          TweenMax.staggerTo(
+            line1Spans,
+            1,
+            {
+              alpha: 1,
+            },
+            0.1
+          ),
+          "start"
+        );
+
+        tl.add(
+          TweenMax.staggerTo(
+            line2Spans,
+            1,
+            {
+              alpha: 1,
+            },
+            0.1
+          ),
+          "start+=1.5"
+        );
       }
       if (destination.index == 1) {
         // 두 번째 섹션이 화면에 들어왔을 때 실행할 코드를 작성합니다.
@@ -88,7 +144,7 @@ $(function () {
               scale: 50,
               duration: 1.5,
               ease: "power2.out",
-              delay: 1,
+              delay: 0.3,
             }
           )
             .to(secondText, { y: 0, autoAlpha: 1, duration: 1 });
@@ -120,7 +176,7 @@ $(function () {
         zIndex: "2147483647",
         width: `${this.cursorSize}px`,
         height: `${this.cursorSize}px`,
-        backgroundColor: "#fff",
+        backgroundColor: "rgba(255,255,255,0.2)",
         borderRadius: "50%",
         transition: "500ms, transform 100ms",
         userSelect: "none",
@@ -134,6 +190,7 @@ $(function () {
         width: "6px",
         height: "6px",
         backgroundColor: "#0000",
+        // background: "url(../../../img/emoticion_7260029.png)",
         borderRadius: "50%",
         userSelect: "none",
         pointerEvents: "none",
@@ -141,9 +198,9 @@ $(function () {
       };
 
       if (CSS.supports("backdrop-filter", "invert(1) grayscale(1)")) {
-        this.circleStyle.backdropFilter = "invert(0.85) grayscale(1)";
+        this.circleStyle.backdropFilter = "invert(0.2) grayscale(1)";
         this.dotStyle.backdropFilter = "invert(1)";
-        this.circleStyle.backgroundColor = "#fff0";
+        this.circleStyle.backgroundColor = "rgba(255,255,255,0.2)";
       } else {
         this.circleStyle.backgroundColor = "#000";
         this.circleStyle.opacity = "0.5";
