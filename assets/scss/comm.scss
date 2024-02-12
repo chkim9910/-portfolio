@@ -49,7 +49,40 @@ body {
     top: -72px;
     right: 0;
     font-size: 125px;
-    color: $primary;
+    overflow: hidden;
+  }
+  // .gradient {
+  //   position: absolute;
+  //   width: 200%;
+  //   height: 100%;
+  //   transform: translate(0%, 0%);
+  //   background-image: linear-gradient(
+  //     to right,
+  //     #0097ff,
+  //     #006dff,
+  //     #c500ff,
+  //     #ff00c2,
+  //     #ff5e00
+  //   );
+  //   background-clip: text;
+  //   animation: oscillate 3s linear 1s infinite alternate;
+  // }
+  @keyframes oscillate {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+
+  .tit-txt {
+    color: transparent;
+    background-size: 200%;
+    background-image: linear-gradient(to right, $primary, $white);
+    background-clip: text;
+    // animation: oscillate 3s linear 1s infinite alternate-reverse;
+    // mix-blend-mode: multiply;
   }
   .line-1 {
     top: 160px;

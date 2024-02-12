@@ -132,21 +132,30 @@ $(function () {
         }
         // 텍스트가 타이핑 애니메이션이 모두 완료된 후에 실행될 함수
         const secondText = document.getElementsByClassName("txt-sec-box");
-        const bgCircle = document.getElementsByClassName("bg-circle");
+        const bgCircleHp = document.getElementsByClassName("bg-circle-hp");
+        const bgCircleBk = document.getElementsByClassName("bg-circle-bk");
         gsap.set(secondText, { y: 50, autoAlpha: 0 });
 
         function onComplete() {
           console.log("콜백 함수가 실행되었습니다.");
           const tl = gsap.timeline();
           tl /* .to(text, { y: -50, autoAlpha: 0, duration: 1, delay: 0.5 }) */.to(
-            bgCircle,
+            [bgCircleHp, bgCircleBk],
             {
               scale: 50,
               duration: 1.5,
-              ease: "power2.out",
-              delay: 0.3,
+              ease: "bounce.out",
+              stagger: 0.6,
+              delay: 0.8,
             }
           )
+            // .to(bgCircleBk, {
+            //   scale: 50,
+            //   duration: 1.5,
+            //   ease: "power2.out",
+            //   delay: 0.2,
+            // })
+            .to(text, { y: -50, autoAlpha: 0, duration: 0.1 })
             .to(secondText, { y: 0, autoAlpha: 1, duration: 1 });
         }
       }
