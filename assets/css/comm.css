@@ -343,16 +343,17 @@ body {
     background-position: 0% 0%;
   }
   100% {
-    background-position: 100% 0%;
+    background-position: 70% 0%;
   }
 }
 .sect3 .tit-txt,
 .sect4 .tit-txt {
   color: transparent;
   background-size: 200%;
-  background-image: linear-gradient(to right, #fe3f72, #fff);
+  background-image: linear-gradient(to right, #fe3f72, #efdbb4, lightblue);
   -webkit-background-clip: text;
           background-clip: text;
+  animation: oscillate 3s linear 1s infinite alternate-reverse;
 }
 .sect3 .line-1,
 .sect4 .line-1 {
@@ -361,7 +362,7 @@ body {
 }
 .sect3 .line-2,
 .sect4 .line-2 {
-  top: 722px;
+  top: 802px;
   right: -468px;
   transform: rotate(90deg);
   z-index: 0;
@@ -549,7 +550,7 @@ body {
   font-size: 45px;
   font-weight: 800;
   text-align: center;
-  color: #000;
+  color: #fff;
   position: relative;
 }
 .sect2 .next {

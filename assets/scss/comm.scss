@@ -72,16 +72,21 @@ body {
       background-position: 0% 0%;
     }
     100% {
-      background-position: 100% 0%;
+      background-position: 70% 0%;
     }
   }
 
   .tit-txt {
     color: transparent;
     background-size: 200%;
-    background-image: linear-gradient(to right, $primary, $white);
+    background-image: linear-gradient(
+      to right,
+      $primary,
+      $secondary,
+      lightblue
+    );
     background-clip: text;
-    // animation: oscillate 3s linear 1s infinite alternate-reverse;
+    animation: oscillate 3s linear 1s infinite alternate-reverse;
     // mix-blend-mode: multiply;
   }
   .line-1 {
@@ -89,7 +94,7 @@ body {
     left: 0;
   }
   .line-2 {
-    top: 722px;
+    top: 802px;
     right: -468px;
     transform: rotate(90deg);
     z-index: 0;
