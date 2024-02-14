@@ -84,11 +84,12 @@ $(function () {
       if (destination.index == 1) {
         // 두 번째 섹션이 화면에 들어왔을 때 실행할 코드를 작성합니다.
         console.log("두 번째 섹션이 화면에 들어옵니다!");
-        const sect2Inner = document.querySelector(".sect2 .inner");
-        sect2Inner.classList.add("show");
+        // const sect2Inner = document.querySelector(".sect2 .inner");
+        // sect2Inner.classList.add("show");
         // typing animation
         const text = document.getElementById("text");
         const typingDelay = 150;
+
         gsap.registerPlugin(ScrollTrigger);
         displayText(text, typingDelay, onComplete);
 
@@ -131,32 +132,15 @@ $(function () {
           }
         }
         // 텍스트가 타이핑 애니메이션이 모두 완료된 후에 실행될 함수
-        const secondText = document.getElementsByClassName("txt-sec-box");
-        const bgCircleHp = document.getElementsByClassName("bg-circle-hp");
-        const bgCircleBk = document.getElementsByClassName("bg-circle-bk");
-        gsap.set(secondText, { y: 50, autoAlpha: 0 });
+        const iconButterfly = document.getElementsByClassName("em-butterfly");
+        // const bgCircleHp = document.getElementsByClassName("bg-circle-hp");
+        // const bgCircleBk = document.getElementsByClassName("bg-circle-bk");
+        gsap.set(iconButterfly, { y: 50, autoAlpha: 0 });
 
         function onComplete() {
           console.log("콜백 함수가 실행되었습니다.");
           const tl = gsap.timeline();
-          tl /* .to(text, { y: -50, autoAlpha: 0, duration: 1, delay: 0.5 }) */.to(
-            [bgCircleHp, bgCircleBk],
-            {
-              scale: 50,
-              duration: 1.5,
-              ease: "bounce.out",
-              stagger: 0.6,
-              delay: 0.8,
-            }
-          )
-            // .to(bgCircleBk, {
-            //   scale: 50,
-            //   duration: 1.5,
-            //   ease: "power2.out",
-            //   delay: 0.2,
-            // })
-            .to(text, { y: -50, autoAlpha: 0, duration: 0.1 })
-            .to(secondText, { y: 0, autoAlpha: 1, duration: 1 });
+          tl.to(iconButterfly, { y: 0, autoAlpha: 1, duration: 1 });
         }
       }
       if (destination.index == 2) {

@@ -540,10 +540,6 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  opacity: 0;
-}
-.sect2 .inner.show {
-  opacity: 1;
 }
 .sect2 .txt-fst {
   display: inline;
@@ -567,6 +563,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
   z-index: 10;
 }
