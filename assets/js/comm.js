@@ -89,7 +89,6 @@ $(function () {
         // typing animation
         const text = document.getElementById("text");
         const typingDelay = 150;
-
         gsap.registerPlugin(ScrollTrigger);
         displayText(text, typingDelay, onComplete);
 
@@ -133,8 +132,6 @@ $(function () {
         }
         // 텍스트가 타이핑 애니메이션이 모두 완료된 후에 실행될 함수
         const iconButterfly = document.getElementsByClassName("em-butterfly");
-        // const bgCircleHp = document.getElementsByClassName("bg-circle-hp");
-        // const bgCircleBk = document.getElementsByClassName("bg-circle-bk");
         gsap.set(iconButterfly, { y: 50, autoAlpha: 0 });
 
         function onComplete() {
