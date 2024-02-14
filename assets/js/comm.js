@@ -121,13 +121,12 @@ $(function () {
             if (index < nodes.length - 1) {
               displayText(target, delay, callback, nodes, ++index);
             }
+            callback();
             //텍스트가 타이핑 애니메이션이 모두 완료된 후 콜백함수 실행
-            else {
-              if (callback) {
-                callback();
-                console.log("실행완료");
-              }
-            }
+            // else {
+            //   callback();
+            //   console.log("실행완료");
+            // }
           }
         }
         // 텍스트가 타이핑 애니메이션이 모두 완료된 후에 실행될 함수

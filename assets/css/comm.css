@@ -319,19 +319,22 @@ body {
 }
 
 .sect3 .inner,
-.sect4 .inner {
+.sect4 .inner,
+.sect5 .inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .sect3 .wrapper,
-.sect4 .wrapper {
+.sect4 .wrapper,
+.sect5 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .sect3 .title,
-.sect4 .title {
+.sect4 .title,
+.sect5 .title {
   position: absolute;
   top: -72px;
   right: 0;
@@ -340,28 +343,31 @@ body {
 }
 @keyframes oscillate {
   0% {
-    background-position: 0% 0%;
+    background-position: 0% 100%;
   }
   100% {
-    background-position: 70% 0%;
+    background-position: 0% 40%;
   }
 }
 .sect3 .tit-txt,
-.sect4 .tit-txt {
+.sect4 .tit-txt,
+.sect5 .tit-txt {
   color: transparent;
   background-size: 200%;
-  background-image: linear-gradient(to right, #fe3f72, #efdbb4, lightblue);
+  background: url(../img/OAK3ZD0.jpg) no-repeat 0 60%;
   -webkit-background-clip: text;
           background-clip: text;
   animation: oscillate 3s linear 1s infinite alternate-reverse;
 }
 .sect3 .line-1,
-.sect4 .line-1 {
+.sect4 .line-1,
+.sect5 .line-1 {
   top: 160px;
   left: 0;
 }
 .sect3 .line-2,
-.sect4 .line-2 {
+.sect4 .line-2,
+.sect5 .line-2 {
   top: 802px;
   right: -468px;
   transform: rotate(90deg);
@@ -590,8 +596,8 @@ body {
 .sect2 .em-butterfly {
   font-size: 40px;
   position: absolute;
-  top: -40px;
-  right: -60px;
+  top: 300px;
+  right: 500px;
   transform: rotate(45deg);
 }
 .sect2 #type-text {
@@ -620,7 +626,7 @@ body {
 .sect3 .pic {
   width: 300px;
   height: 410px;
-  background: #ddd;
+  background: url(/assets/img/profile/1694613920744.jpg) no-repeat 100% 20%/130%;
 }
 .sect3 .content {
   display: flex;
