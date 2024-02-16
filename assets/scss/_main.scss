@@ -266,15 +266,21 @@
 }
 .sect3 {
   position: relative;
+  .inner {
+    flex-direction: column;
+    align-items: unset;
+    justify-content: center;
+  }
   .wrapper {
     margin-top: 100px;
     justify-content: space-evenly;
   }
   .pic {
-    width: 300px;
-    height: 410px;
+    width: 550px;
+    height: 450px;
+    border-radius: 20px;
     // background: #ddd;
-    background: url(/assets/img/profile/1694613920744.jpg) no-repeat 100% 20% /130%;
+    background: url(/assets/img/profile/profile.jpg) no-repeat 50% 100% / cover;
   }
   .content {
     display: flex;
@@ -301,7 +307,83 @@
   }
 }
 .sect4 {
+  background: #ff862b;
+  position: relative;
+  .half-bg {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: #000;
+  }
   .title {
     left: 0;
+  }
+  .web {
+    @include web;
+    background: url(../img/work/동물자유연대-web.png) no-repeat 50% 0% / cover;
+    transition: all 2.5s ease-in-out 0.8s;
+    &:hover {
+      background-position: 50% 100%;
+    }
+  }
+  .mob {
+    position: absolute;
+    bottom: 30px;
+    left: -80px;
+    width: 235px;
+    height: 470px;
+    background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
+    z-index: 20;
+  }
+  .mob-mockup {
+    position: absolute;
+    bottom: 61px;
+    left: -64px;
+    width: 201px;
+    height: 419px;
+    background: url(../img/work/동물자유연대-mob.png) no-repeat 50% 0% / cover;
+    z-index: 10;
+    animation: mob 10s ease-in-out 1s infinite alternate;
+  }
+  @keyframes mob {
+    0% {
+      background-position: 50% 0%;
+    }
+    100% {
+      background-position: 50% 100%;
+    }
+  }
+  .pal-1 {
+    background: #f76a00;
+  }
+  .pal-2 {
+    background: #ad5700;
+  }
+  .pal-3 {
+    background: #222222;
+  }
+  .btn-ele {
+    background: #222;
+  }
+}
+.sec5 {
+  .web {
+    @include web;
+    background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
+    transition: all 2.5s ease-in-out 0.8s;
+    &:hover {
+      background-position: 50% 100%;
+    }
+  }
+  .pal-1 {
+    background: #000;
+  }
+  .pal-2 {
+    background: #d92b2b;
+  }
+  .pal-3 {
+    background: #8a2be2;
   }
 }

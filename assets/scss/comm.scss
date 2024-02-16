@@ -37,8 +37,9 @@ body {
   .inner {
     // position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // flex-direction: column;
+    // justify-content: center;
+    align-items: center;
   }
   .wrapper {
     display: flex;
@@ -51,23 +52,9 @@ body {
     right: 0;
     font-size: 125px;
     overflow: hidden;
+    z-index: 1;
   }
-  // .gradient {
-  //   position: absolute;
-  //   width: 200%;
-  //   height: 100%;
-  //   transform: translate(0%, 0%);
-  //   background-image: linear-gradient(
-  //     to right,
-  //     #0097ff,
-  //     #006dff,
-  //     #c500ff,
-  //     #ff00c2,
-  //     #ff5e00
-  //   );
-  //   background-clip: text;
-  //   animation: oscillate 3s linear 1s infinite alternate;
-  // }
+
   @keyframes oscillate {
     0% {
       background-position: 0% 100%;
@@ -91,10 +78,110 @@ body {
     left: 0;
   }
   .line-2 {
-    top: 802px;
+    top: 684px;
     right: -468px;
     transform: rotate(90deg);
     z-index: 0;
+  }
+  .txt {
+    color: $white;
+  }
+  .work-tit {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .content {
+    margin-bottom: 10px;
+  }
+}
+.sect4,
+.sect5 {
+  .desc-inner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .txt-inner {
+    width: 80%;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: $white;
+  }
+  .tit {
+    font-size: 45px;
+    font-weight: 200;
+    margin-bottom: 50px;
+    span {
+      font-weight: 500;
+    }
+  }
+  .cont {
+    margin-bottom: 12px;
+  }
+  .project-tit {
+    font-size: 26px;
+  }
+  .cont-title {
+    font-size: 18px;
+  }
+  .color-pal-inner {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .color-pal {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .page-desc-inner {
+    margin-top: 20px;
+    font-size: 14px;
+    width: 95%;
+    word-wrap: normal;
+    word-break: keep-all;
+  }
+  .page-info-inner {
+    margin-top: 12px;
+  }
+  .info-el {
+    color: $white;
+    margin-left: 12px;
+  }
+  .prototype {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+  }
+  .web {
+    z-index: 10;
+  }
+  .btn {
+    display: flex;
+  }
+  .btn-ele {
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    width: 110px;
+    height: 35px;
+    margin-right: 5px;
+    margin-top: 16px;
+    border-radius: 35px;
+    color: $white;
+    background: #8a2be2;
+  }
+  .arr-outward {
+    font-size: 16px;
+    color: $gray-400;
   }
 }
 .fp-table {

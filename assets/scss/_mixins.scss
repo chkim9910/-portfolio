@@ -28,6 +28,15 @@
   opacity: 1;
 }
 
+@mixin web {
+  display: block;
+  position: relative;
+  left: 10%;
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+}
+
 // 말줄임
 @mixin ell {
   display: inline-block;
