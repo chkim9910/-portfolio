@@ -140,6 +140,7 @@ body {
     height: 45px;
     border-radius: 50%;
     background: #fff;
+    @include boxShadow;
   }
   .page-desc-inner {
     margin-top: 20px;
@@ -182,6 +183,14 @@ body {
   .arr-outward {
     font-size: 16px;
     color: $gray-400;
+  }
+  @keyframes mob {
+    0% {
+      background-position: 50% 0%;
+    }
+    100% {
+      background-position: 50% 100%;
+    }
   }
 }
 .fp-table {

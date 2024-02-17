@@ -310,11 +310,7 @@
   background: #ff862b;
   position: relative;
   .half-bg {
-    width: 40%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
+    @include halfBg;
     background: #000;
   }
   .title {
@@ -329,32 +325,23 @@
     }
   }
   .mob {
-    position: absolute;
-    bottom: 30px;
-    left: -80px;
-    width: 235px;
-    height: 470px;
+    @include mob;
     background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
     z-index: 20;
   }
   .mob-mockup {
-    position: absolute;
-    bottom: 61px;
-    left: -64px;
-    width: 201px;
-    height: 419px;
+    @include mobMockup;
     background: url(../img/work/동물자유연대-mob.png) no-repeat 50% 0% / cover;
-    z-index: 10;
     animation: mob 10s ease-in-out 1s infinite alternate;
   }
-  @keyframes mob {
-    0% {
-      background-position: 50% 0%;
-    }
-    100% {
-      background-position: 50% 100%;
-    }
-  }
+  // @keyframes mob {
+  //   0% {
+  //     background-position: 50% 0%;
+  //   }
+  //   100% {
+  //     background-position: 50% 100%;
+  //   }
+  // }
   .pal-1 {
     background: #f76a00;
   }
@@ -370,23 +357,20 @@
 }
 .sect5 {
   background: #8a2be2;
+  .half-bg {
+    @include halfBg;
+    background: #000;
+  }
   .web {
-    display: block;
-    position: relative;
-    left: 10%;
-    width: 90%;
-    height: 100%;
-    overflow: hidden;
     @include web;
     background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
-    transition: all 2.5s ease-in-out 0.8s;
+    transition: all 8s ease-in-out 0.8s;
     &:hover {
       background-position: 50% 100%;
     }
   }
   .pal-1 {
     background: #000;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .pal-2 {
     background: #d92b2b;
@@ -394,4 +378,25 @@
   .pal-3 {
     background: #8a2be2;
   }
+  .btn-ele {
+    background: #000;
+  }
+  .mob {
+    @include mob;
+    background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
+    z-index: 20;
+  }
+  .mob-mockup {
+    @include mobMockup;
+    background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / cover;
+    animation: mob 15s ease-in-out 1s infinite alternate;
+  }
 }
+// @keyframes mob {
+//   0% {
+//     background-position: 50% 0%;
+//   }
+//   100% {
+//     background-position: 50% 100%;
+//   }
+// }
