@@ -368,8 +368,15 @@
     background: #222;
   }
 }
-.sec5 {
+.sect5 {
+  background: #8a2be2;
   .web {
+    display: block;
+    position: relative;
+    left: 10%;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
     @include web;
     background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
     transition: all 2.5s ease-in-out 0.8s;
@@ -379,6 +386,7 @@
   }
   .pal-1 {
     background: #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .pal-2 {
     background: #d92b2b;

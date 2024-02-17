@@ -3,7 +3,7 @@ $(function () {
     licenseKey: "gplv3-license",
     autoScrolling: true,
 
-    navigationTooltips: ["", "intro", "about", "work"],
+    navigationTooltips: ["", "intro", "about", "project 1", "project 2"],
     showActiveTooltip: true,
     navigation: true,
 
@@ -17,7 +17,7 @@ $(function () {
     recordHistory: true,
 
     // page setting
-    anchors: ["sect1", "sect2", "sect3", "sect4"],
+    anchors: ["sect1", "sect2", "sect3", "sect4", "sect5"],
 
     // 섹션을 스크롤하거나 화면에 들어왔을 때 실행되는 콜백
     afterLoad: function (origin, destination, direction) {
