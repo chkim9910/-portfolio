@@ -775,7 +775,7 @@ body {
   width: 550px;
   height: 450px;
   border-radius: 20px;
-  background: url(../assets/img/profile/profile.jpg) no-repeat 50% 100%/cover;
+  background: url(../img/profile/profile.jpg) no-repeat 50% 100%/cover;
 }
 .sect3 .content {
   display: flex;
