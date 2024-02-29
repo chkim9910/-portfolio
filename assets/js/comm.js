@@ -182,7 +182,7 @@ $(function () {
   $("a").hover(
     function () {
       $("#flag > div > img")
-        .attr("src", "/assets/img/comm/cursor-hover.png")
+        .attr("src", "assets/img/comm/cursor-hover.png")
         .css({
           transform: "rotate(45deg)",
           /* "transform-origin": "center center", */
@@ -192,7 +192,7 @@ $(function () {
     },
     function () {
       $("#flag > div > img")
-        .attr("src", "/assets/img/comm/cursor-basic.png")
+        .attr("src", "assets/img/comm/cursor-basic.png")
         .css({
           transform: "scale(1) rotate(0deg)",
           animation: "rotateAni 5s linear infinite",

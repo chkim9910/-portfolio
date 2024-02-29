@@ -786,10 +786,10 @@ body {
   justify-content: space-evenly;
 }
 .sect3 .pic {
-  width: 550px;
-  height: 450px;
+  width: 360px;
+  height: 390px;
   border-radius: 20px;
-  background: url(/assets/img/profile/profile.jpg) no-repeat 50% 100%/cover;
+  background: url(../img/profile/EmojiMovie730816390.gif) no-repeat 50% 100%/cover;
 }
 .sect3 .content {
   display: flex;
@@ -797,7 +797,7 @@ body {
   gap: 27px;
 }
 .sect3 .name {
-  font-size: 20px;
+  font-size: 27px;
   color: #fff;
 }
 .sect3 .txt {
@@ -811,8 +811,10 @@ body {
   display: block;
 }
 .sect3 .intro {
+  width: 600px;
   font-size: 16px;
   color: #efdbb4;
+  word-break: keep-all;
 }
 
 .sect4 {
