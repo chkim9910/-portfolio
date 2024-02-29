@@ -603,7 +603,7 @@ body {
   right: -170px;
 }
 .sect1 .box {
-  width: 1000px;
+  width: 800px;
   display: flex;
   justify-content: space-between;
   margin-top: 7.612vw;
@@ -632,17 +632,31 @@ body {
   letter-spacing: 2px;
 }
 .sect1 .sub-txt-box {
-  margin-top: 60px;
-  margin-right: 200px;
   display: flex;
   align-items: center;
+  flex: 1;
   position: relative;
+  /* &:before {
+    position: absolute;
+    top: 50px;
+    right: 190px;
+    content: "";
+    // width: 40vw;
+    width: 331px;
+    // width: 23vw;
+    // width: 30vw;
+    height: 1px;
+    background: rgb(239, 219, 180, 0.5);
+  } */
 }
-.sect1 .sub-txt-box:before {
-  position: absolute;
-  top: 50px;
-  right: 190px;
-  content: "";
+.sect1 .line-box {
+  height: 160px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sect1 .line-box .line {
   width: 331px;
   height: 1px;
   background: rgba(239, 219, 180, 0.5);
@@ -655,17 +669,17 @@ body {
   z-index: 0;
 }
 .sect1 .line-1 {
-  top: 730px;
+  top: 750px;
   left: 0vw;
 }
 .sect1 .line-2 {
-  top: 290px;
+  top: 330px;
   left: 0;
 }
 .sect1 .line-3 {
   transform: rotate(90deg);
   top: 180px;
-  left: 405px;
+  left: 165px;
 }
 .sect1 .line-4 {
   transform: rotate(90deg);

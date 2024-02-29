@@ -65,7 +65,7 @@
     right: -170px;
   }
   .box {
-    width: 1000px;
+    width: 800px;
     display: flex;
     justify-content: space-between;
     margin-top: 7.612vw;
@@ -124,12 +124,13 @@
     // }
   }
   .sub-txt-box {
-    margin-top: 60px;
-    margin-right: 200px;
+    // margin-top: 60px;
+    // margin-right: 200px;
     display: flex;
     align-items: center;
+    flex: 1;
     position: relative;
-    &:before {
+    /* &:before {
       position: absolute;
       top: 50px;
       right: 190px;
@@ -140,8 +141,21 @@
       // width: 30vw;
       height: 1px;
       background: rgb(239, 219, 180, 0.5);
+    } */
+  }
+  .line-box {
+    height: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .line {
+      width: 331px;
+      height: 1px;
+      background: rgb(239, 219, 180, 0.5);
     }
   }
+
   .sub-txt {
     color: $secondary;
     line-height: 25px;
@@ -151,18 +165,18 @@
   }
   .line-1 {
     // transform: rotate(90deg);
-    top: 730px;
+    top: 750px;
     left: 0vw;
   }
   .line-2 {
-    top: 290px;
+    top: 330px;
     // top: 170px;
     left: 0;
   }
   .line-3 {
     transform: rotate(90deg);
     top: 180px;
-    left: 405px;
+    left: 165px;
     // left: 587px;
   }
   .line-4 {

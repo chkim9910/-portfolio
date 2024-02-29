@@ -26,15 +26,18 @@ $(function () {
       if (destination.index == 0) {
         var line1 = $(".tit");
         var line2 = $(".tit-2");
+        var box = $(".box");
 
         var line1Spans = $(".tit > span");
         var line2Spans = $(".tit-2 > span");
+        var nameBox = $(".name-box");
+        var subTxtBox = $(".sub-txt-box");
 
         // Set tweens
-        TweenMax.set([line1, line2], {
+        TweenMax.set([line1, line2, box], {
           x: -15,
         });
-        TweenMax.set([line1Spans, line2Spans], {
+        TweenMax.set([line1Spans, line2Spans, nameBox, subTxtBox], {
           alpha: 0,
         });
 
@@ -79,6 +82,15 @@ $(function () {
             0.1
           ),
           "start+=1.5"
+        );
+        // tl.add(TweenMax.to(nameBox, 1, { x: 0 }, "start"), "start + 2");
+        tl.add(
+          TweenMax.staggerTo(nameBox, 1, { x: 20, alpha: 1 }, 0.1),
+          "start + 1.5"
+        );
+        tl.add(
+          TweenMax.staggerTo(subTxtBox, 1, { x: 10, alpha: 1 }, 0.1),
+          "start + 0.5"
         );
       }
       if (destination.index == 1) {
