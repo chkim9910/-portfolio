@@ -326,6 +326,93 @@
   }
 }
 .sect4 {
+  background: #121212;
+  // background: #00c9b0;
+  // background: #b91550;
+  .half-bg {
+    @include halfBg;
+    background: #000;
+    width: 55%;
+  }
+  .web {
+    @include web;
+    display: flex;
+    left: 0;
+    width: 100%;
+    // background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
+    // transition: all 8s ease-in-out 0.8s;
+    // &:hover {
+    //   background-position: 50% 100%;
+    // }
+  }
+  video {
+    width: 680px;
+  }
+  .pal-1 {
+    background: #000;
+  }
+  .pal-2 {
+    background: #7cf8e8;
+  }
+  .pal-3 {
+    background: #fff;
+  }
+  .color-pal {
+    box-shadow: 0px 8px 0px -10px rgba(255, 255, 255, 0.2),
+      0 2px 4px -2px rgba(255, 255, 255, 0.19);
+  }
+  .btn-ele {
+    background: #000;
+  }
+  .mob {
+    @include mob;
+    background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
+    z-index: 20;
+  }
+  .mob-mockup {
+    @include mobMockup;
+    background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / cover;
+    animation: mob 15s ease-in-out 1s infinite alternate;
+  }
+}
+.sect5 {
+  background: #8a2be2;
+  .half-bg {
+    @include halfBg;
+    background: #000;
+  }
+  .web {
+    @include web;
+    background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
+    transition: all 8s ease-in-out 0.8s;
+    &:hover {
+      background-position: 50% 100%;
+    }
+  }
+  .pal-1 {
+    background: #000;
+  }
+  .pal-2 {
+    background: #d92b2b;
+  }
+  .pal-3 {
+    background: #8a2be2;
+  }
+  .btn-ele {
+    background: #000;
+  }
+  .mob {
+    @include mob;
+    background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
+    z-index: 20;
+  }
+  .mob-mockup {
+    @include mobMockup;
+    background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / cover;
+    animation: mob 15s ease-in-out 1s infinite alternate;
+  }
+}
+.sect6 {
   background: #ff862b;
   position: relative;
   .half-bg {
@@ -374,43 +461,7 @@
     background: #222;
   }
 }
-.sect5 {
-  background: #8a2be2;
-  .half-bg {
-    @include halfBg;
-    background: #000;
-  }
-  .web {
-    @include web;
-    background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
-    transition: all 8s ease-in-out 0.8s;
-    &:hover {
-      background-position: 50% 100%;
-    }
-  }
-  .pal-1 {
-    background: #000;
-  }
-  .pal-2 {
-    background: #d92b2b;
-  }
-  .pal-3 {
-    background: #8a2be2;
-  }
-  .btn-ele {
-    background: #000;
-  }
-  .mob {
-    @include mob;
-    background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
-    z-index: 20;
-  }
-  .mob-mockup {
-    @include mobMockup;
-    background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / cover;
-    animation: mob 15s ease-in-out 1s infinite alternate;
-  }
-}
+
 // @keyframes mob {
 //   0% {
 //     background-position: 50% 0%;

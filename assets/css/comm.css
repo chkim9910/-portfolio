@@ -333,20 +333,23 @@ body {
 
 .sect3 .inner,
 .sect4 .inner,
-.sect5 .inner {
+.sect5 .inner,
+.sect6 .inner {
   display: flex;
   align-items: center;
 }
 .sect3 .wrapper,
 .sect4 .wrapper,
-.sect5 .wrapper {
+.sect5 .wrapper,
+.sect6 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .sect3 .title,
 .sect4 .title,
-.sect5 .title {
+.sect5 .title,
+.sect6 .title {
   position: absolute;
   top: -72px;
   right: 0;
@@ -364,7 +367,8 @@ body {
 }
 .sect3 .tit-txt,
 .sect4 .tit-txt,
-.sect5 .tit-txt {
+.sect5 .tit-txt,
+.sect6 .tit-txt {
   color: transparent;
   background-size: 200%;
   background: url(../img/OAK3ZD0.jpg) no-repeat 0 60%;
@@ -374,13 +378,15 @@ body {
 }
 .sect3 .line-1,
 .sect4 .line-1,
-.sect5 .line-1 {
+.sect5 .line-1,
+.sect6 .line-1 {
   top: 160px;
   left: 0;
 }
 .sect3 .line-2,
 .sect4 .line-2,
-.sect5 .line-2 {
+.sect5 .line-2,
+.sect6 .line-2 {
   top: 684px;
   right: -468px;
   transform: rotate(90deg);
@@ -388,24 +394,28 @@ body {
 }
 .sect3 .txt,
 .sect4 .txt,
-.sect5 .txt {
+.sect5 .txt,
+.sect6 .txt {
   color: #fff;
 }
 .sect3 .work-tit,
 .sect4 .work-tit,
-.sect5 .work-tit {
+.sect5 .work-tit,
+.sect6 .work-tit {
   display: block;
   font-size: 32px;
   margin-bottom: 16px;
 }
 .sect3 .content,
 .sect4 .content,
-.sect5 .content {
+.sect5 .content,
+.sect6 .content {
   margin-bottom: 10px;
 }
 
 .sect4 .desc-inner,
-.sect5 .desc-inner {
+.sect5 .desc-inner,
+.sect6 .desc-inner {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -414,7 +424,8 @@ body {
   align-items: center;
 }
 .sect4 .txt-inner,
-.sect5 .txt-inner {
+.sect5 .txt-inner,
+.sect6 .txt-inner {
   width: 80%;
   margin-right: 50px;
   display: flex;
@@ -423,35 +434,42 @@ body {
   color: #fff;
 }
 .sect4 .tit,
-.sect5 .tit {
+.sect5 .tit,
+.sect6 .tit {
   font-size: 45px;
   font-weight: 200;
   margin-bottom: 50px;
 }
 .sect4 .tit span,
-.sect5 .tit span {
+.sect5 .tit span,
+.sect6 .tit span {
   font-weight: 500;
 }
 .sect4 .cont,
-.sect5 .cont {
+.sect5 .cont,
+.sect6 .cont {
   margin-bottom: 12px;
 }
 .sect4 .project-tit,
-.sect5 .project-tit {
+.sect5 .project-tit,
+.sect6 .project-tit {
   font-size: 26px;
 }
 .sect4 .cont-title,
-.sect5 .cont-title {
+.sect5 .cont-title,
+.sect6 .cont-title {
   font-size: 18px;
 }
 .sect4 .color-pal-inner,
-.sect5 .color-pal-inner {
+.sect5 .color-pal-inner,
+.sect6 .color-pal-inner {
   display: flex;
   gap: 12px;
   margin-top: 12px;
 }
 .sect4 .color-pal,
-.sect5 .color-pal {
+.sect5 .color-pal,
+.sect6 .color-pal {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -459,39 +477,47 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .sect4 .page-desc-inner,
-.sect5 .page-desc-inner {
+.sect5 .page-desc-inner,
+.sect6 .page-desc-inner {
   margin-top: 20px;
   font-size: 14px;
+  line-height: 1.5;
   width: 90%;
   word-wrap: normal;
   word-break: keep-all;
 }
 .sect4 .page-info-inner,
-.sect5 .page-info-inner {
+.sect5 .page-info-inner,
+.sect6 .page-info-inner {
   margin-top: 12px;
 }
 .sect4 .info-el,
-.sect5 .info-el {
+.sect5 .info-el,
+.sect6 .info-el {
   color: #fff;
   margin-left: 12px;
 }
 .sect4 .prototype,
-.sect5 .prototype {
+.sect5 .prototype,
+.sect6 .prototype {
   position: relative;
   width: 100%;
   height: 100vh;
   margin-left: auto;
 }
 .sect4 .web,
-.sect5 .web {
+.sect5 .web,
+.sect6 .web {
   z-index: 10;
 }
 .sect4 .btn,
-.sect5 .btn {
+.sect5 .btn,
+.sect6 .btn {
   display: flex;
 }
 .sect4 .btn-ele,
-.sect5 .btn-ele {
+.sect5 .btn-ele,
+.sect6 .btn-ele {
   display: block;
   text-align: center;
   line-height: 35px;
@@ -504,7 +530,8 @@ body {
   background: #8a2be2;
 }
 .sect4 .arr-outward,
-.sect5 .arr-outward {
+.sect5 .arr-outward,
+.sect6 .arr-outward {
   font-size: 16px;
   color: #bdbdbd;
 }
@@ -818,8 +845,7 @@ body {
 }
 
 .sect4 {
-  background: #ff862b;
-  position: relative;
+  background: #121212;
 }
 .sect4 .half-bg {
   width: 40%;
@@ -828,9 +854,7 @@ body {
   right: 0;
   height: 100vh;
   background: #000;
-}
-.sect4 .title {
-  left: 0;
+  width: 55%;
 }
 .sect4 .web {
   display: block;
@@ -839,11 +863,27 @@ body {
   width: 90%;
   height: 100%;
   overflow: hidden;
-  background: url(../img/work/동물자유연대-web.png) no-repeat 50% 0%/cover;
-  transition: all 2.5s ease-in-out 0.8s;
+  display: flex;
+  left: 0;
+  width: 100%;
 }
-.sect4 .web:hover {
-  background-position: 50% 100%;
+.sect4 video {
+  width: 680px;
+}
+.sect4 .pal-1 {
+  background: #000;
+}
+.sect4 .pal-2 {
+  background: #7cf8e8;
+}
+.sect4 .pal-3 {
+  background: #fff;
+}
+.sect4 .color-pal {
+  box-shadow: 0px 8px 0px -10px rgba(255, 255, 255, 0.2), 0 2px 4px -2px rgba(255, 255, 255, 0.19);
+}
+.sect4 .btn-ele {
+  background: #000;
 }
 .sect4 .mob {
   position: absolute;
@@ -861,20 +901,8 @@ body {
   width: 29%;
   height: 45%;
   z-index: 10;
-  background: url(../img/work/동물자유연대-mob.png) no-repeat 50% 0%/cover;
-  animation: mob 10s ease-in-out 1s infinite alternate;
-}
-.sect4 .pal-1 {
-  background: #f76a00;
-}
-.sect4 .pal-2 {
-  background: #ad5700;
-}
-.sect4 .pal-3 {
-  background: #222222;
-}
-.sect4 .btn-ele {
-  background: #222;
+  background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0%/cover;
+  animation: mob 15s ease-in-out 1s infinite alternate;
 }
 
 .sect5 {
@@ -931,4 +959,64 @@ body {
   z-index: 10;
   background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0%/cover;
   animation: mob 15s ease-in-out 1s infinite alternate;
+}
+
+.sect6 {
+  background: #ff862b;
+  position: relative;
+}
+.sect6 .half-bg {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: #000;
+}
+.sect6 .title {
+  left: 0;
+}
+.sect6 .web {
+  display: block;
+  position: relative;
+  left: 10%;
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+  background: url(../img/work/동물자유연대-web.png) no-repeat 50% 0%/cover;
+  transition: all 2.5s ease-in-out 0.8s;
+}
+.sect6 .web:hover {
+  background-position: 50% 100%;
+}
+.sect6 .mob {
+  position: absolute;
+  bottom: 30px;
+  left: -80px;
+  width: 35%;
+  height: 50%;
+  background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
+  z-index: 20;
+}
+.sect6 .mob-mockup {
+  position: absolute;
+  bottom: 61px;
+  left: -63px;
+  width: 29%;
+  height: 45%;
+  z-index: 10;
+  background: url(../img/work/동물자유연대-mob.png) no-repeat 50% 0%/cover;
+  animation: mob 10s ease-in-out 1s infinite alternate;
+}
+.sect6 .pal-1 {
+  background: #f76a00;
+}
+.sect6 .pal-2 {
+  background: #ad5700;
+}
+.sect6 .pal-3 {
+  background: #222222;
+}
+.sect6 .btn-ele {
+  background: #222;
 }/*# sourceMappingURL=comm.css.map */

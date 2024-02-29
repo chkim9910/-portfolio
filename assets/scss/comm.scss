@@ -47,7 +47,8 @@ body {
 }
 .sect3,
 .sect4,
-.sect5 {
+.sect5,
+.sect6 {
   .inner {
     // position: relative;
     display: flex;
@@ -110,7 +111,8 @@ body {
   }
 }
 .sect4,
-.sect5 {
+.sect5,
+.sect6 {
   .desc-inner {
     position: relative;
     width: 100%;
@@ -126,6 +128,8 @@ body {
     flex-direction: column;
     justify-content: start;
     color: $white;
+    // background: rgb(0, 0, 0, 0.05);
+    // backdrop-filter: blur(5px);
   }
   .tit {
     font-size: 45px;
@@ -159,6 +163,7 @@ body {
   .page-desc-inner {
     margin-top: 20px;
     font-size: 14px;
+    line-height: 1.5;
     width: 90%;
     word-wrap: normal;
     word-break: keep-all;

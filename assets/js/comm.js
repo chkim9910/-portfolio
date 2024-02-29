@@ -3,7 +3,14 @@ $(function () {
     licenseKey: "gplv3-license",
     autoScrolling: true,
 
-    navigationTooltips: ["", "intro", "about", "project 1", "project 2"],
+    navigationTooltips: [
+      "",
+      "intro",
+      "about",
+      "project 1",
+      "project 2",
+      "project 3",
+    ],
     showActiveTooltip: true,
     navigation: true,
 
@@ -17,7 +24,7 @@ $(function () {
     recordHistory: true,
 
     // page setting
-    anchors: ["sect1", "sect2", "sect3", "sect4", "sect5"],
+    anchors: ["sect1", "sect2", "sect3", "sect4", "sect5", "sect6"],
 
     // 섹션을 스크롤하거나 화면에 들어왔을 때 실행되는 콜백
     afterLoad: function (origin, destination, direction) {
@@ -153,6 +160,11 @@ $(function () {
       }
       if (destination.index == 2) {
         console.log("세 번째 섹션이 화면에 들어옵니다!");
+      }
+      if (destination.index == 3) {
+        console.log("project1 섹션이 화면에 들어옵니다!");
+        let vid = document.getElementById("chVideo");
+        vid.play();
       }
     },
   });
