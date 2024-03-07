@@ -474,7 +474,7 @@ body {
   height: 45px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.2);
 }
 .sect4 .page-desc-inner,
 .sect5 .page-desc-inner,
@@ -490,6 +490,11 @@ body {
 .sect5 .page-info-inner,
 .sect6 .page-info-inner {
   margin-top: 12px;
+}
+.sect4 .wai mark,
+.sect5 .wai mark,
+.sect6 .wai mark {
+  background-color: #ffe1d6;
 }
 .sect4 .info-el,
 .sect5 .info-el,
@@ -534,14 +539,6 @@ body {
 .sect6 .arr-outward {
   font-size: 16px;
   color: #bdbdbd;
-}
-@keyframes mob {
-  0% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 50% 100%;
-  }
 }
 
 .fp-table {
@@ -889,18 +886,19 @@ body {
   position: absolute;
   bottom: 30px;
   left: -80px;
-  width: 35%;
-  height: 50%;
+  width: 215px;
+  height: 429px;
   background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
   z-index: 20;
 }
 .sect4 .mob-mockup {
   position: absolute;
-  bottom: 61px;
-  left: -63px;
-  width: 29%;
-  height: 45%;
+  bottom: 43px;
+  left: -70px;
+  width: 197px;
+  height: 403px;
   z-index: 10;
+  overflow: hidden;
   background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0%/cover;
   animation: mob 15s ease-in-out 1s infinite alternate;
 }
@@ -945,20 +943,31 @@ body {
   position: absolute;
   bottom: 30px;
   left: -80px;
-  width: 35%;
-  height: 50%;
-  background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
+  width: 215px;
+  height: 429px;
+  background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
   z-index: 20;
 }
 .sect5 .mob-mockup {
   position: absolute;
-  bottom: 61px;
-  left: -63px;
-  width: 29%;
-  height: 45%;
+  bottom: 43px;
+  left: -70px;
+  width: 197px;
+  height: 403px;
   z-index: 10;
-  background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0%/cover;
+  overflow: hidden;
+}
+.sect5 .mob-mockup .inner {
+  background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0%/100%;
   animation: mob 15s ease-in-out 1s infinite alternate;
+}
+@keyframes mob {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 110%;
+  }
 }
 
 .sect6 {
@@ -993,20 +1002,31 @@ body {
   position: absolute;
   bottom: 30px;
   left: -80px;
-  width: 35%;
-  height: 50%;
-  background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
+  width: 215px;
+  height: 429px;
+  background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
   z-index: 20;
 }
 .sect6 .mob-mockup {
   position: absolute;
-  bottom: 61px;
-  left: -63px;
-  width: 29%;
-  height: 45%;
+  bottom: 43px;
+  left: -70px;
+  width: 197px;
+  height: 403px;
   z-index: 10;
+  overflow: hidden;
+}
+.sect6 .mob-mockup .inner {
   background: url(../img/work/동물자유연대-mob.png) no-repeat 50% 0%/cover;
-  animation: mob 10s ease-in-out 1s infinite alternate;
+  animation: mob2 10s ease-in-out 1s infinite alternate;
+}
+@keyframes mob2 {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 135%;
+  }
 }
 .sect6 .pal-1 {
   background: #f76a00;

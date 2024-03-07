@@ -171,6 +171,14 @@ body {
   .page-info-inner {
     margin-top: 12px;
   }
+  .wai {
+    mark {
+      // background-color: #403c3d;
+      // color: #c7708e;
+      // color: #ffe1d6;
+      background-color: #ffe1d6;
+    }
+  }
   .info-el {
     color: $white;
     margin-left: 12px;
@@ -202,14 +210,6 @@ body {
   .arr-outward {
     font-size: 16px;
     color: $gray-400;
-  }
-  @keyframes mob {
-    0% {
-      background-position: 50% 0%;
-    }
-    100% {
-      background-position: 50% 100%;
-    }
   }
 }
 .fp-table {
