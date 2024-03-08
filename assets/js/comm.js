@@ -101,62 +101,110 @@ $(function () {
         );
       }
       if (destination.index == 1) {
-        // 두 번째 섹션이 화면에 들어왔을 때 실행할 코드를 작성합니다.
         console.log("두 번째 섹션이 화면에 들어옵니다!");
-        // const sect2Inner = document.querySelector(".sect2 .inner");
-        // sect2Inner.classList.add("show");
-        // typing animation
-        const text = document.getElementById("text");
-        const typingDelay = 150;
-        gsap.registerPlugin(ScrollTrigger);
-        displayText(text, typingDelay, onComplete);
+        // 함수 호출
+        typingAni();
+        setTimeout(function () {
+          displayText(text, typingDelay, onComplete);
+        }, 1500);
 
-        function displayText(target, delay, callback, nodes, index = 0) {
-          if (index === 0) {
-            nodes = [].slice.call(target.children);
-            // console.log(nodes);
-            target.innerHTML = "";
-          }
-          const currentNode = nodes[index];
-          const currentNodeText = currentNode.innerHTML;
-          currentNode.innerHTML = "";
-          target.appendChild(currentNode);
-          // 만약 현재 노드의 내용이 있다면
-          if (currentNodeText) {
-            let i = 0;
-            const cars = currentNodeText.split("");
-            const effect = setInterval(() => {
-              currentNode.innerHTML += cars[i];
-              i++;
-              if (i === cars.length) {
-                clearInterval(effect);
-                // 만약 현재 노드가 마지막 노드가 아니라면 다음 노드 처리
-                if (index < nodes.length - 1) {
-                  displayText(target, delay, callback, nodes, ++index);
-                }
-              }
-            }, delay);
-          } else {
-            if (index < nodes.length - 1) {
-              displayText(target, delay, callback, nodes, ++index);
-            }
-            // callback();
-            //텍스트가 타이핑 애니메이션이 모두 완료된 후 콜백함수 실행
-            else {
-              callback();
-              console.log("실행완료");
-            }
-          }
-        }
-        // 텍스트가 타이핑 애니메이션이 모두 완료된 후에 실행될 함수
-        const iconButterfly = document.getElementsByClassName("em-butterfly");
-        gsap.set(iconButterfly, { y: 50, autoAlpha: 0 });
+        // typing animation1
+        function typingAni() {
+          var txtline = $(".txt-tit");
+          var txtlineSpans = $(".tit > span");
+          var txtline2 = $(".txt-sec-box");
+          var txtline2Spans = $(".txt-sec-box > span");
 
-        function onComplete() {
-          console.log("콜백 함수가 실행되었습니다.");
-          const tl = gsap.timeline();
-          tl.to(iconButterfly, { y: 0, autoAlpha: 1, duration: 1 });
+          TweenMax.set([txtline, txtline2], {
+            x: -50,
+            opacity: 0,
+          });
+          TweenMax.set([txtlineSpans, txtline2Spans], {
+            alpha: 0,
+          });
+
+          var txttl = new TimelineMax({
+            repeat: 0,
+          });
+          txttl.add(
+            TweenMax.to(txtline, 0.6, {
+              x: 0,
+              opacity: 1,
+            }),
+            "start"
+          );
+          txttl.add(
+            TweenMax.to(txtline2, 1, {
+              x: 0,
+              opacity: 1,
+            }),
+            "start"
+          );
+          txttl.add(
+            TweenMax.staggerTo(
+              txtline2Spans,
+              1,
+              {
+                alpha: 1,
+                fontWeight: 600,
+              },
+              0.1
+            ),
+            "start"
+          );
         }
+
+        // typing animation2
+        // 주석풀기
+        // const text = document.getElementById("text");
+        // const typingDelay = 150;
+        // gsap.registerPlugin(ScrollTrigger);
+        // // displayText(text, typingDelay, onComplete);
+
+        // function displayText(target, delay, callback, nodes, index = 0) {
+        //   if (index === 0) {
+        //     nodes = [].slice.call(target.children);
+        //     // console.log(nodes);
+        //     target.innerHTML = "";
+        //   }
+        //   const currentNode = nodes[index];
+        //   const currentNodeText = currentNode.innerHTML;
+        //   currentNode.innerHTML = "";
+        //   target.appendChild(currentNode);
+        //   // 만약 현재 노드의 내용이 있다면
+        //   if (currentNodeText) {
+        //     let i = 0;
+        //     const cars = currentNodeText.split("");
+        //     const effect = setInterval(() => {
+        //       currentNode.innerHTML += cars[i];
+        //       i++;
+        //       if (i === cars.length) {
+        //         clearInterval(effect);
+        //         // 만약 현재 노드가 마지막 노드가 아니라면 다음 노드 처리
+        //         if (index < nodes.length - 1) {
+        //           displayText(target, delay, callback, nodes, ++index);
+        //         }
+        //       }
+        //     }, delay);
+        //   } else {
+        //     if (index < nodes.length - 1) {
+        //       displayText(target, delay, callback, nodes, ++index);
+        //     }
+        //     // callback();
+        //     //텍스트가 타이핑 애니메이션이 모두 완료된 후 콜백함수 실행
+        //     else {
+        //       callback();
+        //       console.log("실행완료");
+        //     }
+        //   }
+        // }
+        // // 텍스트가 타이핑 애니메이션이 모두 완료된 후에 실행될 함수
+
+        // function onComplete() {
+        //   console.log("콜백 함수가 실행되었습니다.");
+        //   const tl = gsap.timeline();
+        //   tl.to(iconButterfly, { y: 0, autoAlpha: 1, duration: 1 });
+        // }
       }
       if (destination.index == 2) {
         console.log("세 번째 섹션이 화면에 들어옵니다!");

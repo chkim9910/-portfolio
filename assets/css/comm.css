@@ -721,7 +721,6 @@ body {
   background: #000;
 }
 .sect2 .inner {
-  max-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -747,21 +746,23 @@ body {
   right: 355px;
 }
 .sect2 .txt-sec-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
+  text-align: left;
   z-index: 10;
 }
-.sect2 .txt-sec {
-  font-size: 48px;
-  font-weight: 800;
-  color: transparent;
-  background: url(../img/5160549.jpg) no-repeat 100% 10%/100%;
-  -webkit-background-clip: text;
-          background-clip: text;
-  animation: gradient-animation2 16s ease-in-out infinite alternate;
+.sect2 .txt-sec-box span {
+  font-size: 40px;
+  font-weight: 500;
+  color: #efdbb4;
+  line-height: 1.2;
+  opacity: 0;
+}
+.sect2 .txt-tit {
+  opacity: 0;
+}
+.sect2 .txt-tit span {
+  font-size: 120px;
+  font-weight: 600;
+  color: #fe3f72;
 }
 @keyframes gradient-animation2 {
   0% {
@@ -821,7 +822,7 @@ body {
   gap: 27px;
 }
 .sect3 .name {
-  font-size: 27px;
+  font-size: 37px;
   color: #fff;
 }
 .sect3 .txt {

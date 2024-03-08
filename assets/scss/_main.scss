@@ -197,7 +197,7 @@
   //   no-repeat 50% 0 / cover;
 
   .inner {
-    max-width: 100vw;
+    // max-width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -226,23 +226,40 @@
     right: 355px;
   }
   .txt-sec-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
+    text-align: left;
+    // transform: translate(-50%, -50%);
     z-index: 10;
+    span {
+      font-size: 40px;
+      font-weight: 500;
+      color: $secondary;
+      line-height: 1.2;
+      opacity: 0;
+    }
   }
-  .txt-sec {
-    font-size: 48px;
-    font-weight: 800;
-    // color: $primary;
-    color: transparent;
-    background: url(../img/5160549.jpg) no-repeat 100% 10% / 100%;
-    background-clip: text;
-    animation: gradient-animation2 16s ease-in-out infinite alternate;
-    // color: $black;
+  .txt-tit {
+    // transform: translateY(-50px);
+    // position: absolute;
+    // transform: translate(0px, -90px);
+    opacity: 0;
+    span {
+      font-size: 120px;
+      font-weight: 600;
+      color: $primary;
+    }
   }
+  // .txt-sec {
+  //   font-size: 35px;
+  //   font-weight: 500;
+  //   color: $secondary;
+  //   line-height: 1.3;
+  //   // font-weight: 800;
+  //   // color: transparent;
+  //   // background: url(../img/5160549.jpg) no-repeat 100% 10% / 100%;
+  //   // background-clip: text;
+  //   // animation: gradient-animation2 16s ease-in-out infinite alternate;
+  //   // color: $black;
+  // }
   @keyframes gradient-animation2 {
     0% {
       background-position: 100% 50%;
@@ -305,7 +322,7 @@
     gap: 27px;
   }
   .name {
-    font-size: 27px;
+    font-size: 37px;
     color: $white;
   }
   .txt {
