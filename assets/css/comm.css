@@ -454,6 +454,7 @@ body {
 .sect5 .tit span,
 .sect6 .tit span {
   font-weight: 500;
+  opacity: 1;
 }
 .sect3 .cont,
 .sect4 .cont,
