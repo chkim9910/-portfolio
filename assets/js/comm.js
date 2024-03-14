@@ -112,7 +112,7 @@ $(function () {
         // typing animation1
         function typingAni() {
           var txtline = $(".sect2 .txt-tit");
-          var txtlineSpans = $(".sect2 .tit > span");
+          var txtlineSpans = $(".sect2 .txt-tit > span");
           var txtline2 = $(".sect2 .txt-sec-box");
           var txtline2Spans = $(".sect2 .txt-sec-box > span");
 
@@ -121,7 +121,7 @@ $(function () {
             opacity: 0,
           });
           TweenMax.set([txtlineSpans, txtline2Spans], {
-            alpha: 0,
+            opacity: 0,
           });
 
           var txttl = new TimelineMax({
@@ -135,9 +135,22 @@ $(function () {
             "start"
           );
           txttl.add(
+            TweenMax.staggerTo(
+              txtlineSpans,
+              1,
+              {
+                alpha: 1,
+                fontWeight: 700,
+              },
+              0.1
+            ),
+            "start"
+          );
+          txttl.add(
             TweenMax.to(txtline2, 1, {
               x: 0,
               opacity: 1,
+              delay: 1.5,
             }),
             "start"
           );
@@ -148,6 +161,7 @@ $(function () {
               {
                 alpha: 1,
                 fontWeight: 600,
+                delay: 1.8,
               },
               0.1
             ),
