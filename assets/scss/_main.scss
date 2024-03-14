@@ -337,7 +337,7 @@
     @include mobMockup;
     .inner {
       background: url(../img/work/x2y2.mob.png) no-repeat 50% 0% / 100%;
-      animation: mob0 8s ease-in-out 1s infinite alternate;
+      animation: mob0 5s ease-in-out 1s infinite alternate;
     }
   }
   @keyframes mob0 {
@@ -345,7 +345,7 @@
       background-position: 50% 0%;
     }
     100% {
-      background-position: 50% -1160px;
+      background-position: 50% -890px;
     }
   }
 }
