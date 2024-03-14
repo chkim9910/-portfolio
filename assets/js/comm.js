@@ -105,16 +105,16 @@ $(function () {
         console.log("두 번째 섹션이 화면에 들어옵니다!");
         // 함수 호출
         typingAni();
-        setTimeout(function () {
-          displayText(text, typingDelay, onComplete);
-        }, 1500);
+        // setTimeout(function () {
+        //   displayText(text, typingDelay, onComplete);
+        // }, 1500);
 
         // typing animation1
         function typingAni() {
-          var txtline = $(".txt-tit");
-          var txtlineSpans = $(".tit > span");
-          var txtline2 = $(".txt-sec-box");
-          var txtline2Spans = $(".txt-sec-box > span");
+          var txtline = $(".sect2 .txt-tit");
+          var txtlineSpans = $(".sect2 .tit > span");
+          var txtline2 = $(".sect2 .txt-sec-box");
+          var txtline2Spans = $(".sect2 .txt-sec-box > span");
 
           TweenMax.set([txtline, txtline2], {
             x: -50,
