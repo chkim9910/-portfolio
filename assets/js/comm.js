@@ -32,14 +32,14 @@ $(function () {
       // destination.item이 현재 섹션을 나타냅니다.
       // 원하는 섹션에 대한 조건을 설정하여 해당 섹션이 화면에 들어왔을 때 동작을 수행합니다.
       if (destination.index == 0) {
-        var line1 = $(".tit");
-        var line2 = $(".tit-2");
-        var box = $(".box");
+        var line1 = $(".sect1 .tit");
+        var line2 = $(".sect1 .tit-2");
+        var box = $(".sect1 .box");
 
-        var line1Spans = $(".tit > span");
-        var line2Spans = $(".tit-2 > span");
-        var nameBox = $(".name-box");
-        var subTxtBox = $(".sub-txt-box");
+        var line1Spans = $(".sect1 .tit > span");
+        var line2Spans = $(".sect1 .tit-2 > span");
+        var nameBox = $(".sect1 .name-box");
+        var subTxtBox = $(".sect1 .sub-txt-box");
 
         // Set tweens
         TweenMax.set([line1, line2, box], {
