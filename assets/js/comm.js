@@ -6,10 +6,11 @@ $(function () {
     navigationTooltips: [
       "",
       "intro",
-      "about",
       "project 1",
       "project 2",
       "project 3",
+      "project 4",
+      "contact",
     ],
     showActiveTooltip: true,
     navigation: true,
@@ -24,7 +25,7 @@ $(function () {
     recordHistory: true,
 
     // page setting
-    anchors: ["sect1", "sect2", "sect3", "sect4", "sect5", "sect6"],
+    anchors: ["sect1", "sect2", "sect3", "sect4", "sect5", "sect6", "sect7"],
 
     // 섹션을 스크롤하거나 화면에 들어왔을 때 실행되는 콜백
     afterLoad: function (origin, destination, direction) {

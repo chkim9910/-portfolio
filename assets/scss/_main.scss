@@ -243,8 +243,8 @@
     // transform: translate(0px, -90px);
     opacity: 0;
     span {
-      font-size: 120px;
-      font-weight: 600;
+      font-size: 130px;
+      font-weight: 700;
       color: $primary;
     }
   }
@@ -296,50 +296,50 @@
   }
 }
 .sect3 {
-  position: relative;
-  .inner {
-    flex-direction: column;
-    align-items: unset;
-    justify-content: center;
+  background: $black;
+  .half-bg {
+    @include halfBg;
+    background: #000;
   }
-  .wrapper {
-    margin-top: 100px;
-    justify-content: space-evenly;
-    // justify-content: start;
-    // gap: 40px;
-  }
-  .pic {
-    width: 360px;
-    height: 390px;
-    border-radius: 20px;
-    // background: #ddd;
-    background: url(../img/profile/EmojiMovie730816390.gif) no-repeat 50% 100% /
-      cover;
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-  }
-  .name {
-    font-size: 37px;
-    color: $white;
-  }
-  .txt {
-    font-size: 16px;
-    color: $white;
-    strong {
-      color: $secondary;
-    }
-    span {
-      display: block;
+  .web {
+    @include web;
+    background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
+    transition: all 8s ease-in-out 0.8s;
+    &:hover {
+      background-position: 50% 100%;
     }
   }
-  .intro {
-    width: 600px;
-    font-size: 16px;
-    color: $secondary;
-    word-break: keep-all;
+  .pal-1 {
+    background: $white;
+  }
+  .pal-2 {
+    background: #16161a;
+  }
+  .pal-3 {
+    background: #3b82f6;
+  }
+  .btn-ele {
+    background: #000;
+  }
+  .mob {
+    @include mob;
+    background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
+    z-index: 20;
+  }
+  .mob-mockup {
+    @include mobMockup;
+    .inner {
+      background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / 100%;
+      animation: mob 15s ease-in-out 1s infinite alternate;
+    }
+  }
+  @keyframes mob {
+    0% {
+      background-position: 50% 0%;
+    }
+    100% {
+      background-position: 50% -5510px;
+    }
   }
 }
 .sect4 {
@@ -497,5 +497,95 @@
   }
   .btn-ele {
     background: #222;
+  }
+}
+.sect7 {
+  position: relative;
+  .inner {
+    flex-direction: column;
+    align-items: unset;
+    justify-content: center;
+  }
+  .wrapper {
+    display: block;
+    margin-top: 10%;
+    // justify-content: space-evenly;
+    // justify-content: start;
+    // gap: 40px;
+  }
+  .tit-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    // justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  .pic {
+    width: 360px;
+    height: 390px;
+    border-radius: 20px;
+    // background: #ddd;
+    background: url(../img/profile/EmojiMovie730816390.gif) no-repeat 50% 100% /
+      cover;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // gap: 27px;
+  }
+  .content-sub {
+    // display: flex;
+    // justify-content: space-between;
+    gap: 40px;
+    align-items: flex-end;
+    width: 100%;
+    padding: 20px;
+    // margin-top: 10px;
+    background: rgb(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+  .cont {
+    display: flex;
+    justify-content: space-between;
+  }
+  .name {
+    font-size: 20px;
+    // font-size: 37px;
+    color: $white;
+    margin-bottom: 20px;
+  }
+  .addr-box {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .addr {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 50px;
+    // font-size: 70px;
+    letter-spacing: -2.2px;
+    color: $white;
+  }
+  .gotoaddr {
+    color: $secondary;
+    font-size: 40px;
+  }
+  .txt {
+    font-size: 16px;
+    color: $white;
+    // margin-bottom: 10px;
+    strong {
+      color: $secondary;
+    }
+    span {
+      display: block;
+    }
+  }
+  .intro {
+    width: 600px;
+    font-size: 16px;
+    color: $secondary;
+    word-break: keep-all;
   }
 }

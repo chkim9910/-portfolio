@@ -48,7 +48,8 @@ body {
 .sect3,
 .sect4,
 .sect5,
-.sect6 {
+.sect6,
+.sect7 {
   .inner {
     // position: relative;
     display: flex;
@@ -62,10 +63,11 @@ body {
     align-items: center;
   }
   .title {
-    position: absolute;
-    top: -72px;
-    right: 0;
-    font-size: 125px;
+    // position: absolute;
+    // top: -72px;
+    // right: 0;
+    font-size: 50px;
+    // font-size: 125px;
     overflow: hidden;
     z-index: 1;
   }
@@ -93,7 +95,8 @@ body {
     left: 0;
   }
   .line-2 {
-    top: 684px;
+    // top: 684px;
+    top: 0px;
     right: -468px;
     transform: rotate(90deg);
     z-index: 0;
@@ -110,6 +113,7 @@ body {
     margin-bottom: 10px;
   }
 }
+.sect3,
 .sect4,
 .sect5,
 .sect6 {
