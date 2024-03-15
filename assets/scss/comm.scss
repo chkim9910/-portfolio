@@ -251,4 +251,88 @@ body {
   color: yellow;
 }
 
+#cursor {
+  position: fixed;
+  z-index: 1001;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  top: 0%;
+  left: 0%;
+  border: 2px solid $primary;
+  background: transparent;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out, border-width 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out, background 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: $primary;
+    top: calc(50% - 1px);
+    left: 14px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 0.3s;
+    transform-origin: right;
+    transform: scaleY(0) rotate(0deg);
+    z-index: 9;
+  }
+  &.linkhover {
+    border-color: transparent;
+    border-width: 4px;
+    background: $primary;
+    // background: #7cf8e8;
+  }
+  &.active {
+    background: $black;
+    border: $black;
+
+    &:before,
+    &:after {
+      transition-delay: 0.6s;
+    }
+    &:before {
+      transform: scaleY(1) rotate(-45deg);
+    }
+    &:after {
+      transform: scaleY(1) rotate(45deg);
+    }
+    strong {
+      &:before {
+        transform: scaleX(1);
+        transition-delay: 0.3s;
+      }
+    }
+  }
+}
+
+strong.circle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  line-height: 1;
+  margin: 0;
+  transition: 0.3s ease-in-out;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: $primary;
+    top: calc(50% - 1px);
+    left: 5px;
+    transition: 0.3s ease-in-out;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition-delay: 0.6s;
+  }
+}
+
 @import "main";

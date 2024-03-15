@@ -595,6 +595,82 @@ body {
   color: yellow;
 }
 
+#cursor {
+  position: fixed;
+  z-index: 1001;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  top: 0%;
+  left: 0%;
+  border: 2px solid #fe3f72;
+  background: transparent;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out, border-width 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+#cursor:before, #cursor:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #fe3f72;
+  top: calc(50% - 1px);
+  left: 14px;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.3s;
+  transform-origin: right;
+  transform: scaleY(0) rotate(0deg);
+  z-index: 9;
+}
+#cursor.linkhover {
+  border-color: transparent;
+  border-width: 4px;
+  background: #fe3f72;
+}
+#cursor.active {
+  background: #000;
+  border: #000;
+}
+#cursor.active:before, #cursor.active:after {
+  transition-delay: 0.6s;
+}
+#cursor.active:before {
+  transform: scaleY(1) rotate(-45deg);
+}
+#cursor.active:after {
+  transform: scaleY(1) rotate(45deg);
+}
+#cursor.active strong:before {
+  transform: scaleX(1);
+  transition-delay: 0.3s;
+}
+
+strong.circle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  line-height: 1;
+  margin: 0;
+  transition: 0.3s ease-in-out;
+}
+strong.circle:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #fe3f72;
+  top: calc(50% - 1px);
+  left: 5px;
+  transition: 0.3s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition-delay: 0.6s;
+}
+
 .sect1 {
   overflow: hidden;
   position: relative;
@@ -829,7 +905,7 @@ body {
 }
 
 .sect3 {
-  background: #000;
+  background: linear-gradient(160deg, #00e0ff, #562ec8);
 }
 .sect3 .half-bg {
   width: 40%;
@@ -856,13 +932,13 @@ body {
   background: #fff;
 }
 .sect3 .pal-2 {
-  background: #16161a;
+  background: #562ec8;
 }
 .sect3 .pal-3 {
-  background: #3b82f6;
+  background: linear-gradient(160deg, #00e0ff, #562ec8);
 }
 .sect3 .btn-ele {
-  background: #000;
+  background: #562ec8;
 }
 .sect3 .mob {
   position: absolute;
@@ -884,14 +960,14 @@ body {
 }
 .sect3 .mob-mockup .inner {
   background: url(../img/work/x2y2.mob.png) no-repeat 50% 0%/100%;
-  animation: mob0 5s ease-in-out 1s infinite alternate;
+  animation: mob0 7s ease-in-out 1s infinite alternate;
 }
 @keyframes mob0 {
   0% {
     background-position: 50% 0%;
   }
   100% {
-    background-position: 50% -890px;
+    background-position: 50% -1360px;
   }
 }
 
@@ -934,7 +1010,8 @@ body {
   box-shadow: 0px 8px 0px -10px rgba(255, 255, 255, 0.2), 0 2px 4px -2px rgba(255, 255, 255, 0.19);
 }
 .sect4 .btn-ele {
-  background: #000;
+  background: #7cf8e8;
+  color: #000;
 }
 .sect4 .mob {
   position: absolute;

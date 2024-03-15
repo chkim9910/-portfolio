@@ -233,45 +233,96 @@ $(function () {
   });
 
   // 커서
-  var $mouseX = 0,
-    $mouseY = 0,
-    $xp = 0,
-    $yp = 0,
-    $flag = $("#flag");
+  // var $mouseX = 0,
+  //   $mouseY = 0,
+  //   $xp = 0,
+  //   $yp = 0,
+  //   $flag = $("#flag");
 
-  $(document).mousemove(function (e) {
-    $mouseX = e.pageX;
-    $mouseY = e.pageY;
+  // $(document).mousemove(function (e) {
+  //   $mouseX = e.pageX;
+  //   $mouseY = e.pageY;
+  // });
+
+  // var $loop = setInterval(function () {
+  //   // change 12 to alter damping higher is slower
+  //   $xp += ($mouseX - $xp) / 32;
+  //   $yp += ($mouseY - $yp) / 32;
+  //   $flag.css({
+  //     left: $xp - $flag.width() * 0.5 + "px",
+  //     top: $yp - $flag.height() * 0.5 + "px",
+  //   });
+  // }, 1);
+
+  // $("a").hover(
+  //   function () {
+  //     $("#flag > div > img")
+  //       .attr("src", "assets/img/comm/cursor-hover.png")
+  //       .css({
+  //         transform: "rotate(45deg)",
+  //         /* "transform-origin": "center center", */
+  //         transition: "all 0.2s",
+  //         animation: "none",
+  //       });
+  //   },
+  //   function () {
+  //     $("#flag > div > img")
+  //       .attr("src", "assets/img/comm/cursor-basic.png")
+  //       .css({
+  //         transform: "scale(1) rotate(0deg)",
+  //         animation: "rotateAni 5s linear infinite",
+  //       });
+  //   }
+  // );
+
+  // cursor
+  const cursor = document.getElementById("cursor");
+  const links = document.getElementsByTagName("a");
+  const buttons = document.getElementsByTagName("button");
+
+  for (button of buttons) {
+    button.addEventListener("mouseover", function (event) {
+      cursor.classList.add("active");
+    });
+    button.addEventListener("mousemove", function (event) {
+      cursor.classList.add("active");
+    });
+    button.addEventListener("mouseout", function (event) {
+      cursor.classList.remove("active");
+    });
+  }
+
+  for (link of links) {
+    link.addEventListener("mouseover", function (event) {
+      cursor.classList.add("active");
+    });
+    link.addEventListener("mousemove", function (event) {
+      cursor.classList.add("active");
+    });
+    link.addEventListener("mouseout", function (event) {
+      cursor.classList.remove("active");
+    });
+  }
+
+  gsap.set("#cursor", { xPercent: -50, yPercent: -50 });
+  const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  const mouse = { x: pos.x, y: pos.y };
+  const speed = 0.35;
+
+  const xSet = gsap.quickSetter(cursor, "x", "px");
+  const ySet = gsap.quickSetter(cursor, "y", "px");
+
+  window.addEventListener("mousemove", (e) => {
+    mouse.x = e.x;
+    mouse.y = e.y;
   });
 
-  var $loop = setInterval(function () {
-    // change 12 to alter damping higher is slower
-    $xp += ($mouseX - $xp) / 32;
-    $yp += ($mouseY - $yp) / 32;
-    $flag.css({
-      left: $xp - $flag.width() * 0.5 + "px",
-      top: $yp - $flag.height() * 0.5 + "px",
-    });
-  }, 1);
+  gsap.ticker.add(() => {
+    const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
 
-  $("a").hover(
-    function () {
-      $("#flag > div > img")
-        .attr("src", "assets/img/comm/cursor-hover.png")
-        .css({
-          transform: "rotate(45deg)",
-          /* "transform-origin": "center center", */
-          transition: "all 0.2s",
-          animation: "none",
-        });
-    },
-    function () {
-      $("#flag > div > img")
-        .attr("src", "assets/img/comm/cursor-basic.png")
-        .css({
-          transform: "scale(1) rotate(0deg)",
-          animation: "rotateAni 5s linear infinite",
-        });
-    }
-  );
+    pos.x += (mouse.x - pos.x) * dt;
+    pos.y += (mouse.y - pos.y) * dt;
+    xSet(pos.x);
+    ySet(pos.y);
+  });
 });

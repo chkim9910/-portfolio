@@ -303,7 +303,9 @@
   }
 }
 .sect3 {
-  background: $black;
+  // background: #00e0ff;
+  background: linear-gradient(160deg, #00e0ff, #562ec8);
+  // background: $black;
   .half-bg {
     @include halfBg;
     background: #000;
@@ -320,13 +322,14 @@
     background: $white;
   }
   .pal-2 {
-    background: #16161a;
+    background: #562ec8;
   }
   .pal-3 {
-    background: #3b82f6;
+    background: linear-gradient(160deg, #00e0ff, #562ec8);
   }
   .btn-ele {
-    background: #000;
+    background: #562ec8;
+    // color: #000;
   }
   .mob {
     @include mob;
@@ -337,7 +340,7 @@
     @include mobMockup;
     .inner {
       background: url(../img/work/x2y2.mob.png) no-repeat 50% 0% / 100%;
-      animation: mob0 5s ease-in-out 1s infinite alternate;
+      animation: mob0 7s ease-in-out 1s infinite alternate;
     }
   }
   @keyframes mob0 {
@@ -345,7 +348,7 @@
       background-position: 50% 0%;
     }
     100% {
-      background-position: 50% -890px;
+      background-position: 50% -1360px;
     }
   }
 }
@@ -386,7 +389,8 @@
       0 2px 4px -2px rgba(255, 255, 255, 0.19);
   }
   .btn-ele {
-    background: #000;
+    background: #7cf8e8;
+    color: #000;
   }
   .mob {
     @include mob;
