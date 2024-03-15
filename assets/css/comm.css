@@ -603,7 +603,7 @@ body {
   border-radius: 100%;
   top: 0%;
   left: 0%;
-  border: 2px solid #fe3f72;
+  border: 2px solid #efdbb4;
   background: transparent;
   pointer-events: none;
   display: flex;
@@ -855,7 +855,7 @@ strong.circle:before {
   font-size: 36px;
   font-weight: 400;
   color: #efdbb4;
-  line-height: 1.3;
+  line-height: 1.4;
   letter-spacing: -3px;
   opacity: 0;
 }
@@ -880,13 +880,6 @@ strong.circle:before {
   100% {
     background-position: 30% 80%;
   }
-}
-.sect2 .em-butterfly {
-  font-size: 40px;
-  position: absolute;
-  top: 300px;
-  right: 500px;
-  transform: rotate(45deg);
 }
 .sect2 #type-text {
   color: #fff;
@@ -1183,12 +1176,19 @@ strong.circle:before {
 .sect7 .wrapper {
   display: block;
   margin-top: 10%;
+  position: relative;
 }
 .sect7 .tit-box {
   display: flex;
   align-items: flex-end;
   gap: 20px;
   margin-bottom: 50px;
+}
+.sect7 .em-butterfly {
+  font-size: 36px;
+  position: absolute;
+  top: -8px;
+  left: 360px;
 }
 .sect7 .pic {
   width: 360px;

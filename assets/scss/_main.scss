@@ -237,7 +237,7 @@
       font-weight: 400;
       // color: $white;
       color: $secondary;
-      line-height: 1.3;
+      line-height: 1.4;
       letter-spacing: -3px;
       // line-height: 1.2;
       opacity: 0;
@@ -277,13 +277,6 @@
     100% {
       background-position: 30% 80%;
     }
-  }
-  .em-butterfly {
-    font-size: 40px;
-    position: absolute;
-    top: 300px;
-    right: 500px;
-    transform: rotate(45deg);
   }
 
   #type-text {
@@ -520,6 +513,7 @@
   .wrapper {
     display: block;
     margin-top: 10%;
+    position: relative;
     // justify-content: space-evenly;
     // justify-content: start;
     // gap: 40px;
@@ -530,6 +524,12 @@
     gap: 20px;
     // justify-content: space-evenly;
     margin-bottom: 50px;
+  }
+  .em-butterfly {
+    font-size: 36px;
+    position: absolute;
+    top: -8px;
+    left: 360px;
   }
   .pic {
     width: 360px;
