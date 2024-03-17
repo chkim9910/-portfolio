@@ -382,7 +382,7 @@ body {
 .sect5 .line-1,
 .sect6 .line-1,
 .sect7 .line-1 {
-  top: 160px;
+  top: 80px;
   left: 0;
 }
 .sect3 .line-2,
@@ -746,6 +746,7 @@ strong.circle:before {
   color: #efdbb4;
   font-size: 55px;
   line-height: 60px;
+  font-family: "Ubuntu", sans-serif;
 }
 .sect1 .copyright {
   color: #efdbb4;
@@ -829,6 +830,10 @@ strong.circle:before {
   align-items: flex-end;
   position: relative;
 }
+.sect2 .txt-tit {
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: -5px;
+}
 .sect2 .txt-fst {
   display: inline;
   font-size: 45px;
@@ -867,7 +872,7 @@ strong.circle:before {
   font-size: 100px;
   font-weight: 700;
   color: #fe3f72;
-  letter-spacing: 7px;
+  letter-spacing: 2px;
   opacity: 0;
 }
 @keyframes gradient-animation2 {

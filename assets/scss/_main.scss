@@ -92,6 +92,7 @@
     color: $secondary;
     font-size: 55px;
     line-height: 60px;
+    font-family: "Ubuntu", sans-serif;
   }
   .copyright {
     color: $secondary;
@@ -207,6 +208,10 @@
     align-items: flex-end;
     position: relative;
   }
+  .txt-tit {
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: -5px;
+  }
   .txt-fst {
     display: inline;
     font-size: 45px;
@@ -250,7 +255,7 @@
       font-size: 100px;
       font-weight: 700;
       color: $primary;
-      letter-spacing: 7px;
+      letter-spacing: 2px;
       opacity: 0;
     }
   }
