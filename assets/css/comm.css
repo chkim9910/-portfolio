@@ -317,7 +317,6 @@ body {
   max-height: 700px;
   margin: 0 auto;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .line {
@@ -426,7 +425,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
 }
@@ -829,6 +827,7 @@ strong.circle:before {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  overflow: hidden;
 }
 .sect2 .txt-tit {
   font-family: "Ubuntu", sans-serif;
@@ -911,20 +910,8 @@ strong.circle:before {
   top: 0;
   right: 0;
   height: 100vh;
+  width: 55%;
   background: #000;
-}
-.sect3 .web {
-  display: block;
-  position: relative;
-  left: 10%;
-  width: 90%;
-  height: 100%;
-  overflow: hidden;
-  background: url(../img/work/x2y2.web.png) no-repeat 50% 0%/cover;
-  transition: all 0.5s ease-in-out 0.8s;
-}
-.sect3 .web:hover {
-  background-position: 50% 100%;
 }
 .sect3 .pal-1 {
   background: #fff;
@@ -937,6 +924,17 @@ strong.circle:before {
 }
 .sect3 .btn-ele {
   background: #562ec8;
+}
+.sect3 #x2y2 {
+  position: absolute;
+  z-index: 3;
+  top: 21%;
+  height: 540px;
+}
+@media screen and (max-width: 1600px) {
+  .sect3 #x2y2 {
+    height: 470px;
+  }
 }
 .sect3 .mob {
   position: absolute;
@@ -988,12 +986,20 @@ strong.circle:before {
   width: 90%;
   height: 100%;
   overflow: hidden;
+  overflow: visible;
   display: flex;
   left: 0;
   width: 100%;
 }
-.sect4 video {
-  width: 680px;
+.sect4 #chVideo {
+  position: absolute;
+  top: 23%;
+  width: 870px;
+}
+@media screen and (max-width: 1600px) {
+  .sect4 #chVideo {
+    width: 710px;
+  }
 }
 .sect4 .pal-1 {
   background: #000;
