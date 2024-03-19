@@ -317,7 +317,6 @@ body {
   max-height: 700px;
   margin: 0 auto;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .line {
@@ -426,7 +425,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
 }
@@ -908,19 +906,6 @@ strong.circle:before {
   height: 100vh;
   background: #000;
 }
-.sect3 .web {
-  display: block;
-  position: relative;
-  left: 10%;
-  width: 90%;
-  height: 100%;
-  overflow: hidden;
-  background: url(../img/work/x2y2.web.png) no-repeat 50% 0%/cover;
-  transition: all 0.5s ease-in-out 0.8s;
-}
-.sect3 .web:hover {
-  background-position: 50% 100%;
-}
 .sect3 .pal-1 {
   background: #fff;
 }
@@ -932,6 +917,13 @@ strong.circle:before {
 }
 .sect3 .btn-ele {
   background: #562ec8;
+}
+.sect3 .page {
+  position: absolute;
+  z-index: 3;
+  width: 123%;
+  height: 100%;
+  left: 0px;
 }
 .sect3 .mob {
   position: absolute;
@@ -983,12 +975,24 @@ strong.circle:before {
   width: 90%;
   height: 100%;
   overflow: hidden;
+  overflow: visible;
   display: flex;
   left: 0;
   width: 100%;
 }
 .sect4 video {
-  width: 680px;
+  width: 121%;
+  position: absolute;
+  top: 20%;
+  left: -30px;
+  z-index: 3;
+}
+.sect4 .page {
+  position: absolute;
+  z-index: 3;
+  width: 123%;
+  height: 100%;
+  left: 0px;
 }
 .sect4 .pal-1 {
   background: #000;

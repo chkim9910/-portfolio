@@ -1,141 +1,147 @@
 @mixin posX {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @mixin posY {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @mixin posXY {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @mixin ani-s {
-  transform: translateY(60px);
-  opacity: 0;
-  transition: all 0.5s;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 @mixin ani-e {
-  transform: translateY(0);
-  opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
 }
-
+@mixin page {
+    position: absolute;
+    z-index: 3;
+    width: 123%;
+    height: 100%;
+    left: 0px;
+}
 @mixin web {
-  display: block;
-  position: relative;
-  left: 10%;
-  width: 90%;
-  height: 100%;
-  overflow: hidden;
+    display: block;
+    position: relative;
+    left: 10%;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
 }
 @mixin halfBg {
-  width: 40%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100vh;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
 }
 @mixin boxShadow {
-  box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.2);
 }
 @mixin mob {
-  position: absolute;
-  bottom: 30px;
-  left: -80px;
-  width: 215px;
-  height: 429px;
+    position: absolute;
+    bottom: 30px;
+    left: -80px;
+    width: 215px;
+    height: 429px;
 }
 @mixin mobMockup {
-  position: absolute;
-  bottom: 43px;
-  left: -70px;
-  width: 197px;
-  height: 403px;
-  // width: 29%;
-  // height: 45%;
-  z-index: 10;
-  overflow: hidden;
+    position: absolute;
+    bottom: 43px;
+    left: -70px;
+    width: 197px;
+    height: 403px;
+    // width: 29%;
+    // height: 45%;
+    z-index: 10;
+    overflow: hidden;
 }
 
 // 말줄임
 @mixin ell {
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
 }
 
 @mixin img-g {
-  display: inline-block;
-  overflow: hidden;
-  background: url(../../images/img-comm.png) no-repeat;
-  vertical-align: top;
-  text-indent: -9999px;
-  font-size: 0;
-  line-height: 0;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../../images/img-comm.png) no-repeat;
+    vertical-align: top;
+    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
 }
 
 @mixin box-line {
-  border: 1px solid $border-color;
-  border-top: 1px solid #19a0cf;
+    border: 1px solid $border-color;
+    border-top: 1px solid #19a0cf;
 }
 
 @mixin ico_square {
-  position: relative;
-  padding-left: 12px;
+    position: relative;
+    padding-left: 12px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 0;
-    width: 3px;
-    height: 3px;
-    background: #555;
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 3px;
+        height: 3px;
+        background: #555;
+    }
 }
 
 @mixin ff-g {
-  font-family: "mGothic";
+    font-family: 'mGothic';
 }
 
 @mixin position($p: absolute, $t: null, $b: null, $l: null, $r: null) {
-  position: $p;
-  top: $t;
-  bottom: $b;
-  left: $l;
-  right: $r;
+    position: $p;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
 }
 
 @mixin flex($justify: center, $align: center, $direction: row) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
 }
 
 @mixin flexSpaceBetween {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @mixin icon {
-  width: $icon-width;
-  height: $icon-height;
+    width: $icon-width;
+    height: $icon-height;
 }
 
 @mixin card($bg-color, $border-color) {
-  height: 300px;
-  border: 1px solid $border-color;
-  background-color: $bg-color;
+    height: 300px;
+    border: 1px solid $border-color;
+    background-color: $bg-color;
 }

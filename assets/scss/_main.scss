@@ -1,136 +1,135 @@
 .sect1 {
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  .title {
+    overflow: hidden;
     position: relative;
-    top: 100px;
-    // top: 125px;
-    right: 0;
-    // right: -80px;
-    width: 100%;
-    height: 454px;
-    z-index: 10;
-  }
-  .tit {
-    // -webkit-text-stroke: 2px $primary;
-    color: transparent;
-    background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg)
-      no-repeat 50% 50% / 100%;
-    background-clip: text;
-    animation: gradient-animation 16s ease-in-out infinite alternate;
-    // line-height: 86%;
-    position: absolute;
-    top: 116px;
-    // top: 86px;
-    // top: 120px;
-    left: 0;
-    span {
-      font-size: 250px;
-      // font-size: 300px;
-      letter-spacing: -10px;
+    display: flex;
+    .title {
+        position: relative;
+        top: 100px;
+        // top: 125px;
+        right: 0;
+        // right: -80px;
+        width: 100%;
+        height: 454px;
+        z-index: 10;
     }
-  }
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 80%;
+    .tit {
+        // -webkit-text-stroke: 2px $primary;
+        color: transparent;
+        background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg) no-repeat 50% 50% / 100%;
+        background-clip: text;
+        animation: gradient-animation 16s ease-in-out infinite alternate;
+        // line-height: 86%;
+        position: absolute;
+        top: 116px;
+        // top: 86px;
+        // top: 120px;
+        left: 0;
+        span {
+            font-size: 250px;
+            // font-size: 300px;
+            letter-spacing: -10px;
+        }
     }
-    50% {
-      background-position: 80% 30%;
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 80%;
+        }
+        50% {
+            background-position: 80% 30%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
     }
-    100% {
-      background-position: 100% 50%;
+    .tit-2 {
+        color: $primary;
+        // font-size: 180px;
+        // line-height: 86%;
+        position: absolute;
+        // bottom: -130px;
+        top: 280px;
+        right: 0;
+        letter-spacing: -4px;
+        span {
+            font-size: 180px;
+        }
     }
-  }
-  .tit-2 {
-    color: $primary;
-    // font-size: 180px;
-    // line-height: 86%;
-    position: absolute;
-    // bottom: -130px;
-    top: 280px;
-    right: 0;
-    letter-spacing: -4px;
-    span {
-      font-size: 180px;
-    }
-  }
 
-  .sub-tit {
-    color: rgb(239, 219, 180, 0.6);
-    font-size: 100px;
-    font-family: "Allura", cursive;
-    position: absolute;
-    bottom: -200px;
-    right: -170px;
-  }
-  .box {
-    width: 800px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 7.612vw;
-    // margin-top: -3.388vw;
-    // margin-top: -1.388vw;
-    position: relative;
-    z-index: 20;
-    // margin-left: 50px;
-    // height: 150px;
-    // width: 1100px;
-    // margin-top: -20px;
-    // margin-top: 150px;
-    // margin-top: -150px;
-    // margin-right: 160px;
-  }
-  .name-upper {
-    color: $secondary;
-    font-size: 19px;
-    line-height: 40px;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-  }
-  .name {
-    color: $secondary;
-    font-size: 55px;
-    line-height: 60px;
-  }
-  .copyright {
-    color: $secondary;
-    line-height: 18px;
-    font-size: 14px;
-    position: absolute;
-    top: 24px;
-    right: 0;
-    // right: 380px;
-    // top: 314px;
-    // top: 144px;
-    // top: 194px;
-    // right: -164px;
-    // right: -129px;
-    // transform: rotate(90deg);
-    letter-spacing: 2px;
-    // &::before {
-    //   position: absolute;
-    //   right: 410px;
-    //   // right: -171px;
-    //   top: 10px;
-    //   content: "";
-    //   display: block;
-    //   width: 100vw;
-    //   height: 100px;
-    //   // width: 1px;
-    //   // height: 300px;
-    //   background: rgb(239, 219, 180, 0.5);
-    //   // transform: rotate(90deg);
-    // }
-  }
-  .sub-txt-box {
-    // margin-top: 60px;
-    // margin-right: 200px;
-    display: flex;
-    align-items: center;
-    flex: 1;
-    position: relative;
-    /* &:before {
+    .sub-tit {
+        color: rgb(239, 219, 180, 0.6);
+        font-size: 100px;
+        font-family: 'Allura', cursive;
+        position: absolute;
+        bottom: -200px;
+        right: -170px;
+    }
+    .box {
+        width: 800px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7.612vw;
+        // margin-top: -3.388vw;
+        // margin-top: -1.388vw;
+        position: relative;
+        z-index: 20;
+        // margin-left: 50px;
+        // height: 150px;
+        // width: 1100px;
+        // margin-top: -20px;
+        // margin-top: 150px;
+        // margin-top: -150px;
+        // margin-right: 160px;
+    }
+    .name-upper {
+        color: $secondary;
+        font-size: 19px;
+        line-height: 40px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+    .name {
+        color: $secondary;
+        font-size: 55px;
+        line-height: 60px;
+    }
+    .copyright {
+        color: $secondary;
+        line-height: 18px;
+        font-size: 14px;
+        position: absolute;
+        top: 24px;
+        right: 0;
+        // right: 380px;
+        // top: 314px;
+        // top: 144px;
+        // top: 194px;
+        // right: -164px;
+        // right: -129px;
+        // transform: rotate(90deg);
+        letter-spacing: 2px;
+        // &::before {
+        //   position: absolute;
+        //   right: 410px;
+        //   // right: -171px;
+        //   top: 10px;
+        //   content: "";
+        //   display: block;
+        //   width: 100vw;
+        //   height: 100px;
+        //   // width: 1px;
+        //   // height: 300px;
+        //   background: rgb(239, 219, 180, 0.5);
+        //   // transform: rotate(90deg);
+        // }
+    }
+    .sub-txt-box {
+        // margin-top: 60px;
+        // margin-right: 200px;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        position: relative;
+        /* &:before {
       position: absolute;
       top: 50px;
       right: 190px;
@@ -142,461 +141,470 @@
       height: 1px;
       background: rgb(239, 219, 180, 0.5);
     } */
-  }
-  .line-box {
-    height: 160px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .line {
-      width: 331px;
-      height: 1px;
-      background: rgb(239, 219, 180, 0.5);
     }
-  }
+    .line-box {
+        height: 160px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .line {
+            width: 331px;
+            height: 1px;
+            background: rgb(239, 219, 180, 0.5);
+        }
+    }
 
-  .sub-txt {
-    color: $secondary;
-    line-height: 25px;
-    font-size: 25px;
-    font-weight: 700;
-    z-index: 0;
-  }
-  .line-1 {
-    // transform: rotate(90deg);
-    top: 750px;
-    left: 0vw;
-  }
-  .line-2 {
-    top: 330px;
-    // top: 170px;
-    left: 0;
-  }
-  .line-3 {
-    transform: rotate(90deg);
-    top: 180px;
-    left: 165px;
-    // left: 587px;
-  }
-  .line-4 {
-    transform: rotate(90deg);
-    top: 180px;
-    left: -650px;
-  }
-  .em-butterfly,
-  .em-bee,
-  .em-beetle {
-    font-size: 45px;
-  }
+    .sub-txt {
+        color: $secondary;
+        line-height: 25px;
+        font-size: 25px;
+        font-weight: 700;
+        z-index: 0;
+    }
+    .line-1 {
+        // transform: rotate(90deg);
+        top: 750px;
+        left: 0vw;
+    }
+    .line-2 {
+        top: 330px;
+        // top: 170px;
+        left: 0;
+    }
+    .line-3 {
+        transform: rotate(90deg);
+        top: 180px;
+        left: 165px;
+        // left: 587px;
+    }
+    .line-4 {
+        transform: rotate(90deg);
+        top: 180px;
+        left: -650px;
+    }
+    .em-butterfly,
+    .em-bee,
+    .em-beetle {
+        font-size: 45px;
+    }
 }
 .sect2 {
-  display: flex;
-  background: $black;
-  // background: url(../../assets/img/3d-abstract-space-sky-with-stars-nebula.jpg)
-  //   no-repeat 50% 0 / cover;
-
-  .inner {
-    // max-width: 100vw;
-    min-height: fit-content;
-    // min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    // flex-direction: column;
-    // justify-content: center;
-    align-items: flex-end;
-    position: relative;
-  }
-  .txt-fst {
-    display: inline;
-    font-size: 45px;
-    font-weight: 800;
-    text-align: center;
-    color: $white;
-    position: relative;
-    // .black {
-    //   color: $black;
-    // }
-  }
-  .next {
-    position: absolute;
-    top: 50px;
-    left: 153px;
-  }
-  .next-after {
-    position: absolute;
-    top: 0;
-    right: 355px;
-  }
-  .txt-sec-box {
-    text-align: left;
-    // margin-top: 50px;
-    z-index: 10;
-    span {
-      font-size: 36px;
-      font-weight: 400;
-      // color: $white;
-      color: $secondary;
-      line-height: 1.4;
-      letter-spacing: -3px;
-      // line-height: 1.2;
-      opacity: 0;
-    }
-  }
-  .txt-tit {
-    line-height: 0.9;
-    opacity: 0;
-    span {
-      font-size: 100px;
-      font-weight: 700;
-      color: $primary;
-      letter-spacing: 7px;
-      opacity: 0;
-    }
-  }
-
-  // .txt-sec {
-  //   font-size: 35px;
-  //   font-weight: 500;
-  //   color: $secondary;
-  //   line-height: 1.3;
-  //   // font-weight: 800;
-  //   // color: transparent;
-  //   // background: url(../img/5160549.jpg) no-repeat 100% 10% / 100%;
-  //   // background-clip: text;
-  //   // animation: gradient-animation2 16s ease-in-out infinite alternate;
-  //   // color: $black;
-  // }
-  @keyframes gradient-animation2 {
-    0% {
-      background-position: 100% 50%;
-    }
-    50% {
-      background-position: 50% 30%;
-    }
-    100% {
-      background-position: 30% 80%;
-    }
-  }
-
-  #type-text {
-    color: $white;
-  }
-  .bg-circle {
-    position: absolute;
-    bottom: -100px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: $primary;
-  }
-  .bg-circle-bk {
     background: $black;
-  }
+    // background: url(../../assets/img/3d-abstract-space-sky-with-stars-nebula.jpg)
+    //   no-repeat 50% 0 / cover;
+
+    .inner {
+        // max-width: 100vw;
+        min-height: fit-content;
+        // min-height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        // flex-direction: column;
+        // justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+    .txt-fst {
+        display: inline;
+        font-size: 45px;
+        font-weight: 800;
+        text-align: center;
+        color: $white;
+        position: relative;
+        // .black {
+        //   color: $black;
+        // }
+    }
+    .next {
+        position: absolute;
+        top: 50px;
+        left: 153px;
+    }
+    .next-after {
+        position: absolute;
+        top: 0;
+        right: 355px;
+    }
+    .txt-sec-box {
+        text-align: left;
+        // margin-top: 50px;
+        z-index: 10;
+        span {
+            font-size: 36px;
+            font-weight: 400;
+            // color: $white;
+            color: $secondary;
+            line-height: 1.4;
+            letter-spacing: -3px;
+            // line-height: 1.2;
+            opacity: 0;
+        }
+    }
+    .txt-tit {
+        line-height: 0.9;
+        opacity: 0;
+        span {
+            font-size: 100px;
+            font-weight: 700;
+            color: $primary;
+            letter-spacing: 7px;
+            opacity: 0;
+        }
+    }
+
+    // .txt-sec {
+    //   font-size: 35px;
+    //   font-weight: 500;
+    //   color: $secondary;
+    //   line-height: 1.3;
+    //   // font-weight: 800;
+    //   // color: transparent;
+    //   // background: url(../img/5160549.jpg) no-repeat 100% 10% / 100%;
+    //   // background-clip: text;
+    //   // animation: gradient-animation2 16s ease-in-out infinite alternate;
+    //   // color: $black;
+    // }
+    @keyframes gradient-animation2 {
+        0% {
+            background-position: 100% 50%;
+        }
+        50% {
+            background-position: 50% 30%;
+        }
+        100% {
+            background-position: 30% 80%;
+        }
+    }
+
+    #type-text {
+        color: $white;
+    }
+    .bg-circle {
+        position: absolute;
+        bottom: -100px;
+        left: -50px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: $primary;
+    }
+    .bg-circle-bk {
+        background: $black;
+    }
 }
 .sect3 {
-  // background: #00e0ff;
-  background: linear-gradient(160deg, #00e0ff, #562ec8);
-  // background: $black;
-  .half-bg {
-    @include halfBg;
-    background: #000;
-  }
-  .web {
-    @include web;
-    background: url(../img/work/x2y2.web.png) no-repeat 50% 0% / cover;
-    transition: all 0.5s ease-in-out 0.8s;
-    &:hover {
-      background-position: 50% 100%;
-    }
-  }
-  .pal-1 {
-    background: $white;
-  }
-  .pal-2 {
-    background: #562ec8;
-  }
-  .pal-3 {
+    // background: #00e0ff;
     background: linear-gradient(160deg, #00e0ff, #562ec8);
-  }
-  .btn-ele {
-    background: #562ec8;
-    // color: #000;
-  }
-  .mob {
-    @include mob;
-    background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
-    z-index: 20;
-  }
-  .mob-mockup {
-    @include mobMockup;
-    .inner {
-      background: url(../img/work/x2y2.mob.png) no-repeat 50% 0% / 100%;
-      animation: mob0 7s ease-in-out 1s infinite alternate;
+    // background: $black;
+    .half-bg {
+        @include halfBg;
+        background: #000;
     }
-  }
-  @keyframes mob0 {
-    0% {
-      background-position: 50% 0%;
+    // .web {
+    //   @include web;
+    //   background: url(../img/work/x2y2.web.png) no-repeat 50% 0% / cover;
+    //   transition: all 0.5s ease-in-out 0.8s;
+    //   &:hover {
+    //     background-position: 50% 100%;
+    //   }
+    // }
+    .pal-1 {
+        background: $white;
     }
-    100% {
-      background-position: 50% -1360px;
+    .pal-2 {
+        background: #562ec8;
     }
-  }
+    .pal-3 {
+        background: linear-gradient(160deg, #00e0ff, #562ec8);
+    }
+    .btn-ele {
+        background: #562ec8;
+        // color: #000;
+    }
+    .page {
+        @include page;
+    }
+    .mob {
+        @include mob;
+        background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
+        z-index: 20;
+    }
+    .mob-mockup {
+        @include mobMockup;
+        .inner {
+            background: url(../img/work/x2y2.mob.png) no-repeat 50% 0% / 100%;
+            animation: mob0 7s ease-in-out 1s infinite alternate;
+        }
+    }
+    @keyframes mob0 {
+        0% {
+            background-position: 50% 0%;
+        }
+        100% {
+            background-position: 50% -1360px;
+        }
+    }
 }
 .sect4 {
-  background: #121212;
-  // background: #00c9b0;
-  // background: #b91550;
-  .half-bg {
-    @include halfBg;
-    background: #000;
-    width: 55%;
-  }
-  .web {
-    @include web;
-    display: flex;
-    left: 0;
-    width: 100%;
-    // background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
-    // transition: all 8s ease-in-out 0.8s;
-    // &:hover {
-    //   background-position: 50% 100%;
-    // }
-  }
-  video {
-    width: 680px;
-  }
-  .pal-1 {
-    background: #000;
-  }
-  .pal-2 {
-    background: #7cf8e8;
-  }
-  .pal-3 {
-    background: #fff;
-  }
-  .color-pal {
-    box-shadow: 0px 8px 0px -10px rgba(255, 255, 255, 0.2),
-      0 2px 4px -2px rgba(255, 255, 255, 0.19);
-  }
-  .btn-ele {
-    background: #7cf8e8;
-    color: #000;
-  }
-  .mob {
-    @include mob;
-    background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
-    z-index: 20;
-  }
-  .mob-mockup {
-    @include mobMockup;
-    background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / cover;
-    animation: mob 15s ease-in-out 1s infinite alternate;
-  }
+    background: #121212;
+    // background: #00c9b0;
+    // background: #b91550;
+    .half-bg {
+        @include halfBg;
+        background: #000;
+        width: 55%;
+    }
+    .web {
+        @include web;
+        overflow: visible;
+        display: flex;
+        left: 0;
+        width: 100%;
+        // background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
+        // transition: all 8s ease-in-out 0.8s;
+        // &:hover {
+        //   background-position: 50% 100%;
+        // }
+    }
+    video {
+        width: 121%;
+        position: absolute;
+        top: 20%;
+        left: -30px;
+        z-index: 3;
+    }
+    .page {
+        @include page;
+    }
+    .pal-1 {
+        background: #000;
+    }
+    .pal-2 {
+        background: #7cf8e8;
+    }
+    .pal-3 {
+        background: #fff;
+    }
+    .color-pal {
+        box-shadow: 0px 8px 0px -10px rgba(255, 255, 255, 0.2), 0 2px 4px -2px rgba(255, 255, 255, 0.19);
+    }
+    .btn-ele {
+        background: #7cf8e8;
+        color: #000;
+    }
+    .mob {
+        @include mob;
+        background: url(../img/work/phone-mockup.png) no-repeat 29% 60%/450%;
+        z-index: 20;
+    }
+    .mob-mockup {
+        @include mobMockup;
+        background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / cover;
+        animation: mob 15s ease-in-out 1s infinite alternate;
+    }
 }
 .sect5 {
-  background: #8a2be2;
-  .half-bg {
-    @include halfBg;
-    background: #000;
-  }
-  .web {
-    @include web;
-    background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
-    transition: all 8s ease-in-out 0.8s;
-    &:hover {
-      background-position: 50% 100%;
-    }
-  }
-  .pal-1 {
-    background: #000;
-  }
-  .pal-2 {
-    background: #d92b2b;
-  }
-  .pal-3 {
     background: #8a2be2;
-  }
-  .btn-ele {
-    background: #000;
-  }
-  .mob {
-    @include mob;
-    background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
-    z-index: 20;
-  }
-  .mob-mockup {
-    @include mobMockup;
-    .inner {
-      background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / 100%;
-      animation: mob 15s ease-in-out 1s infinite alternate;
+    .half-bg {
+        @include halfBg;
+        background: #000;
     }
-  }
-  @keyframes mob {
-    0% {
-      background-position: 50% 0%;
+    .web {
+        @include web;
+        background: url(../img/work/국립발레단-web.jpg) no-repeat 50% 0% / cover;
+        transition: all 8s ease-in-out 0.8s;
+        &:hover {
+            background-position: 50% 100%;
+        }
     }
-    100% {
-      background-position: 50% -5510px;
+    .pal-1 {
+        background: #000;
     }
-  }
+    .pal-2 {
+        background: #d92b2b;
+    }
+    .pal-3 {
+        background: #8a2be2;
+    }
+    .btn-ele {
+        background: #000;
+    }
+    .mob {
+        @include mob;
+        background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
+        z-index: 20;
+    }
+    .mob-mockup {
+        @include mobMockup;
+        .inner {
+            background: url(../img/work/국립발레단-mob.jpg) no-repeat 50% 0% / 100%;
+            animation: mob 15s ease-in-out 1s infinite alternate;
+        }
+    }
+    @keyframes mob {
+        0% {
+            background-position: 50% 0%;
+        }
+        100% {
+            background-position: 50% -5510px;
+        }
+    }
 }
 .sect6 {
-  background: #ff862b;
-  position: relative;
-  .half-bg {
-    @include halfBg;
-    background: #000;
-  }
-  .title {
-    left: 0;
-  }
-  .web {
-    @include web;
-    background: url(../img/work/동물자유연대-web.png) no-repeat 50% 0% / cover;
-    transition: all 2.5s ease-in-out 0.8s;
-    &:hover {
-      background-position: 50% 100%;
+    background: #ff862b;
+    position: relative;
+    .half-bg {
+        @include halfBg;
+        background: #000;
     }
-  }
-  .mob {
-    @include mob;
-    background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
-    z-index: 20;
-  }
-  .mob-mockup {
-    @include mobMockup;
-    .inner {
-      background: url(../img/work/동물자유연대-mob.png) no-repeat 50% 0% / cover;
-      animation: mob2 10s ease-in-out 1s infinite alternate;
+    .title {
+        left: 0;
     }
-  }
-  @keyframes mob2 {
-    0% {
-      background-position: 50% 0%;
+    .web {
+        @include web;
+        background: url(../img/work/동물자유연대-web.png) no-repeat 50% 0% / cover;
+        transition: all 2.5s ease-in-out 0.8s;
+        &:hover {
+            background-position: 50% 100%;
+        }
     }
-    100% {
-      background-position: 50% -2010px;
-      // background-position: 50% 135%;
+    .mob {
+        @include mob;
+        background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
+        z-index: 20;
     }
-  }
-  // @keyframes mob {
-  //   0% {
-  //     background-position: 50% 0%;
-  //   }
-  //   100% {
-  //     background-position: 50% 100%;
-  //   }
-  // }
-  .pal-1 {
-    background: #f76a00;
-  }
-  .pal-2 {
-    background: #ad5700;
-  }
-  .pal-3 {
-    background: #222222;
-  }
-  .btn-ele {
-    background: #222;
-  }
+    .mob-mockup {
+        @include mobMockup;
+        .inner {
+            background: url(../img/work/동물자유연대-mob.png) no-repeat 50% 0% / cover;
+            animation: mob2 10s ease-in-out 1s infinite alternate;
+        }
+    }
+    @keyframes mob2 {
+        0% {
+            background-position: 50% 0%;
+        }
+        100% {
+            background-position: 50% -2010px;
+            // background-position: 50% 135%;
+        }
+    }
+    // @keyframes mob {
+    //   0% {
+    //     background-position: 50% 0%;
+    //   }
+    //   100% {
+    //     background-position: 50% 100%;
+    //   }
+    // }
+    .pal-1 {
+        background: #f76a00;
+    }
+    .pal-2 {
+        background: #ad5700;
+    }
+    .pal-3 {
+        background: #222222;
+    }
+    .btn-ele {
+        background: #222;
+    }
 }
 .sect7 {
-  position: relative;
-  .inner {
-    flex-direction: column;
-    align-items: unset;
-    justify-content: center;
-  }
-  .wrapper {
-    display: block;
-    margin-top: 10%;
     position: relative;
-    // justify-content: space-evenly;
-    // justify-content: start;
-    // gap: 40px;
-  }
-  .tit-box {
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
-    // justify-content: space-evenly;
-    margin-bottom: 50px;
-  }
-  .em-butterfly {
-    font-size: 36px;
-    position: absolute;
-    top: -8px;
-    left: 360px;
-  }
-  .pic {
-    width: 360px;
-    height: 390px;
-    border-radius: 20px;
-    // background: #ddd;
-    background: url(../img/profile/EmojiMovie730816390.gif) no-repeat 50% 100% /
-      cover;
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // gap: 27px;
-  }
-  .content-sub {
-    // display: flex;
-    // justify-content: space-between;
-    gap: 40px;
-    align-items: flex-end;
-    width: 100%;
-    padding: 20px;
-    // margin-top: 10px;
-    background: rgb(255, 255, 255, 0.05);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-  }
-  .cont {
-    display: flex;
-    justify-content: space-between;
-  }
-  .name {
-    font-size: 20px;
-    // font-size: 37px;
-    color: $white;
-    margin-bottom: 20px;
-  }
-  .addr-box {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  .addr {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 50px;
-    // font-size: 70px;
-    letter-spacing: -2.2px;
-    color: $white;
-  }
-  .gotoaddr {
-    color: $secondary;
-    font-size: 40px;
-  }
-  .txt {
-    font-size: 16px;
-    color: $white;
-    // margin-bottom: 10px;
-    strong {
-      color: $secondary;
+    .inner {
+        flex-direction: column;
+        align-items: unset;
+        justify-content: center;
     }
-    span {
-      display: block;
+    .wrapper {
+        display: block;
+        margin-top: 10%;
+        position: relative;
+        // justify-content: space-evenly;
+        // justify-content: start;
+        // gap: 40px;
     }
-  }
-  .intro {
-    width: 600px;
-    font-size: 16px;
-    color: $secondary;
-    word-break: keep-all;
-  }
+    .tit-box {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+        // justify-content: space-evenly;
+        margin-bottom: 50px;
+    }
+    .em-butterfly {
+        font-size: 36px;
+        position: absolute;
+        top: -8px;
+        left: 360px;
+    }
+    .pic {
+        width: 360px;
+        height: 390px;
+        border-radius: 20px;
+        // background: #ddd;
+        background: url(../img/profile/EmojiMovie730816390.gif) no-repeat 50% 100% / cover;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // gap: 27px;
+    }
+    .content-sub {
+        // display: flex;
+        // justify-content: space-between;
+        gap: 40px;
+        align-items: flex-end;
+        width: 100%;
+        padding: 20px;
+        // margin-top: 10px;
+        background: rgb(255, 255, 255, 0.05);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+    }
+    .cont {
+        display: flex;
+        justify-content: space-between;
+    }
+    .name {
+        font-size: 20px;
+        // font-size: 37px;
+        color: $white;
+        margin-bottom: 20px;
+    }
+    .addr-box {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .addr {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 50px;
+        // font-size: 70px;
+        letter-spacing: -2.2px;
+        color: $white;
+    }
+    .gotoaddr {
+        color: $secondary;
+        font-size: 40px;
+    }
+    .txt {
+        font-size: 16px;
+        color: $white;
+        // margin-bottom: 10px;
+        strong {
+            color: $secondary;
+        }
+        span {
+            display: block;
+        }
+    }
+    .intro {
+        width: 600px;
+        font-size: 16px;
+        color: $secondary;
+        word-break: keep-all;
+    }
 }
