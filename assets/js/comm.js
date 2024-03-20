@@ -1,4 +1,12 @@
 $(function () {
+    // $(window).load(function () {
+    //     $('#load').hide()
+    // })
+    const loading_page = document.getElementById('load')
+    window.onload = function () {
+        loading_page.style.display = 'none'
+    }
+
     new fullpage('#fullpage', {
         licenseKey: 'gplv3-license',
         autoScrolling: true,

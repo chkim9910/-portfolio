@@ -11,18 +11,38 @@ body {
     overflow: hidden;
     font-family: $font-family;
 }
-#flag {
-    position: fixed;
-    left: 0;
+#load {
+    width: 100%;
+    height: 100%;
     top: 0;
-    z-index: 999999999999;
-    pointer-events: none;
+    left: 0;
+    position: fixed;
+    display: block;
+    // opacity: 0.8;
+    background: black;
+    z-index: 99;
+    text-align: center;
 }
 
-#flag > div {
-    width: 100px;
-    height: 80px;
+#load > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
 }
+
+// #flag {
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     z-index: 999999999999;
+//     pointer-events: none;
+// }
+
+// #flag > div {
+//     width: 100px;
+//     height: 80px;
+// }
 
 .section {
     height: 100vh;

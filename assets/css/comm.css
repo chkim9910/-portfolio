@@ -294,17 +294,23 @@ body {
   font-family: "Pretendard Variable", "Noto Sans KR", sans-serif;
 }
 
-#flag {
-  position: fixed;
-  left: 0;
+#load {
+  width: 100%;
+  height: 100%;
   top: 0;
-  z-index: 999999999999;
-  pointer-events: none;
+  left: 0;
+  position: fixed;
+  display: block;
+  background: black;
+  z-index: 99;
+  text-align: center;
 }
 
-#flag > div {
-  width: 100px;
-  height: 80px;
+#load > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
 }
 
 .section {
