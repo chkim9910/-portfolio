@@ -5,6 +5,7 @@
   font-family: "Gowun Dodum", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: $secondary2;
 }
 a {
   cursor: none;
@@ -19,7 +20,8 @@ body {
 
 #menu {
   position: fixed;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 60px;
   background-color: transparent;
@@ -33,8 +35,27 @@ body {
     height: 100%;
     width: 100%;
   }
+  .menu-el-box {
+    background: #faf2e5;
+    transition: all 0.3s;
+    :hover {
+      background: rgb(248, 227, 194);
+    }
+  }
   .menu-el {
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .copyright {
     padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .copyright-el {
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 
@@ -275,7 +296,7 @@ body {
   border-radius: 100%;
   top: 0%;
   left: 0%;
-  border: 2px solid $secondary;
+  border: 2px solid $secondary2;
   background: transparent;
   pointer-events: none;
   display: flex;
@@ -290,7 +311,7 @@ body {
     position: absolute;
     width: 10px;
     height: 2px;
-    background: $primary;
+    background: $primary2;
     top: calc(50% - 1px);
     left: 14px;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -302,12 +323,12 @@ body {
   &.linkhover {
     border-color: transparent;
     border-width: 4px;
-    background: $primary;
+    background: $primary2;
     // background: #7cf8e8;
   }
   &.active {
-    background: $black;
-    border: $black;
+    background: $secondary2;
+    border: $secondary2;
 
     &:before,
     &:after {
@@ -341,7 +362,7 @@ strong.circle {
     position: absolute;
     width: 20px;
     height: 2px;
-    background: $primary;
+    background: $primary2;
     top: calc(50% - 1px);
     left: 5px;
     transition: 0.3s ease-in-out;

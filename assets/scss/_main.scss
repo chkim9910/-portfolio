@@ -18,6 +18,7 @@
   }
   .tit {
     width: 100%;
+    height: 280px;
     // -webkit-text-stroke: 2px $primary;
     color: transparent;
     background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg)
@@ -31,6 +32,8 @@
     // top: 120px;
     left: 0;
     span {
+      display: inline-block;
+      height: 100%;
       font-size: 220px;
       text-align: center;
       // font-size: 300px;
@@ -94,13 +97,13 @@
     font-size: 19px;
     line-height: 30px;
     // line-height: 40px;
-    letter-spacing: 16px;
+    letter-spacing: 14px;
     text-transform: uppercase;
     font-weight: 500;
   }
   .name {
     color: $secondary2;
-    font-size: 50px;
+    font-size: 45px;
     line-height: 60px;
     font-weight: 600;
   }
@@ -163,7 +166,7 @@
     align-items: center;
     justify-content: center;
     .line {
-      width: 164px;
+      width: 184px;
       height: 1px;
       background: $secondary2;
       // background: rgb(239, 219, 180, 0.5);
@@ -211,6 +214,7 @@
     width: 15%;
   }
   .bg-1 {
+    display: none;
     // left: 0;
     right: 0;
   }
@@ -224,6 +228,31 @@
     display: none;
     left: 30%;
     height: 13%;
+  }
+  .stack {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid $secondary2;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .cont {
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    animation: move 22s linear infinite;
+    color: $secondary2;
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }
 .sect2 {
@@ -368,12 +397,12 @@
     z-index: 3;
     top: 21%;
     height: 540px;
-}
-@media screen and (max-width: 1600px) {
+  }
+  @media screen and (max-width: 1600px) {
     #x2y2 {
-        height: 470px;
+      height: 470px;
     }
-}
+  }
   .mob {
     @include mob;
     background: url(../img/work/phone-mockup.png) no-repeat 0% 0%/100%;
@@ -422,12 +451,12 @@
     position: absolute;
     top: 23%;
     width: 870px;
-}
-@media screen and (max-width: 1600px) {
+  }
+  @media screen and (max-width: 1600px) {
     #chVideo {
-        width: 710px;
+      width: 710px;
     }
-}
+  }
   .page {
     @include page;
   }
