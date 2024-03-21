@@ -34,19 +34,19 @@ $(function () {
             // 원하는 섹션에 대한 조건을 설정하여 해당 섹션이 화면에 들어왔을 때 동작을 수행합니다.
             if (destination.index == 0) {
                 var line1 = $('.sect1 .tit')
-                var line2 = $('.sect1 .tit-2')
+                // var line2 = $('.sect1 .tit-2')
                 var box = $('.sect1 .box')
 
                 var line1Spans = $('.sect1 .tit > span')
-                var line2Spans = $('.sect1 .tit-2 > span')
+                // var line2Spans = $('.sect1 .tit-2 > span')
                 var nameBox = $('.sect1 .name-box')
                 var subTxtBox = $('.sect1 .sub-txt-box')
 
                 // Set tweens
-                TweenMax.set([line1, line2, box], {
+                TweenMax.set([line1, box], {
                     x: -15,
                 })
-                TweenMax.set([line1Spans, line2Spans, nameBox, subTxtBox], {
+                TweenMax.set([line1Spans, nameBox, subTxtBox], {
                     alpha: 0,
                 })
 
@@ -62,12 +62,12 @@ $(function () {
                     'start'
                 )
 
-                tl.add(
-                    TweenMax.to(line2, 1.5, {
-                        x: 0,
-                    }),
-                    'start+=1'
-                )
+                // tl.add(
+                //     TweenMax.to(line2, 1.5, {
+                //         x: 0,
+                //     }),
+                //     'start+=1'
+                // )
 
                 tl.add(
                     TweenMax.staggerTo(
@@ -81,17 +81,17 @@ $(function () {
                     'start'
                 )
 
-                tl.add(
-                    TweenMax.staggerTo(
-                        line2Spans,
-                        1,
-                        {
-                            alpha: 1,
-                        },
-                        0.1
-                    ),
-                    'start+=1.5'
-                )
+                // tl.add(
+                //     TweenMax.staggerTo(
+                //         line2Spans,
+                //         1,
+                //         {
+                //             alpha: 1,
+                //         },
+                //         0.1
+                //     ),
+                //     'start+=1.5'
+                // )
                 // tl.add(TweenMax.to(nameBox, 1, { x: 0 }, "start"), "start + 2");
                 tl.add(TweenMax.staggerTo(nameBox, 1, { x: 20, alpha: 1 }, 0.1), 'start + 1.5')
                 tl.add(TweenMax.staggerTo(subTxtBox, 1, { x: 10, alpha: 1 }, 0.1), 'start + 0.5')
