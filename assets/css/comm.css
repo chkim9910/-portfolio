@@ -1034,13 +1034,6 @@ strong.circle:before {
   left: 0;
   width: 100%;
 }
-.sect4 video {
-  width: 121%;
-  position: absolute;
-  top: 20%;
-  left: -30px;
-  z-index: 3;
-}
 .sect4 #chVideo {
   position: absolute;
   top: 23%;
