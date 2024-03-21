@@ -25,9 +25,11 @@
         // top: 120px;
         left: 0;
         span {
-            font-size: 200px;
+            font-size: 220px;
+            text-align: center;
             // font-size: 300px;
             letter-spacing: -10px;
+            font-weight: 700;
         }
     }
     @keyframes gradient-animation {
@@ -67,7 +69,8 @@
         width: 800px;
         display: flex;
         justify-content: space-between;
-        margin-top: 7.612vw;
+        margin-top: 3.612vw;
+        // margin-top: 7.612vw;
         // margin-top: -3.388vw;
         // margin-top: -1.388vw;
         position: relative;
@@ -81,21 +84,24 @@
         // margin-right: 160px;
     }
     .name-upper {
-        color: $secondary;
+        color: $secondary2;
         font-size: 19px;
         line-height: 40px;
-        letter-spacing: 10px;
+        letter-spacing: 19px;
         text-transform: uppercase;
+        font-weight: 500;
     }
     .name {
-        color: $secondary;
+        color: $secondary2;
         font-size: 55px;
         line-height: 60px;
+        font-weight: 600;
     }
     .copyright {
-        color: $secondary;
+        color: $secondary2;
         line-height: 18px;
         font-size: 14px;
+        font-weight: 600;
         position: absolute;
         top: 24px;
         right: 0;
@@ -144,20 +150,21 @@
     }
     .line-box {
         height: 160px;
-        width: 100%;
+        width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         .line {
-            width: 331px;
+            width: 181px;
             height: 1px;
-            background: rgb(239, 219, 180, 0.5);
+            background: $secondary2;
+            // background: rgb(239, 219, 180, 0.5);
         }
     }
 
     .sub-txt {
-        color: $secondary;
-        line-height: 25px;
+        color: $secondary2;
+        // line-height: 25px;
         font-size: 25px;
         font-weight: 700;
         z-index: 0;
