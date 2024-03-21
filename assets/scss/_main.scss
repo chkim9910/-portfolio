@@ -423,6 +423,17 @@
     left: -30px;
     z-index: 3;
   }
+  #chVideo {
+    // width: 680px;
+    position: absolute;
+    top: 23%;
+    width: 870px;
+}
+@media screen and (max-width: 1600px) {
+    #chVideo {
+        width: 710px;
+    }
+}
   .page {
     @include page;
   }
