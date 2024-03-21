@@ -1,4 +1,13 @@
 $(function () {
+    // $(window).load(function () {
+    //     $('#load').hide()
+    // })
+    const loading_page = document.getElementById('load')
+    window.onload = function () {
+        loading_page.fadeOut()
+        // loading_page.style.display = 'none'
+    }
+
     new fullpage('#fullpage', {
         licenseKey: 'gplv3-license',
         autoScrolling: true,
@@ -209,6 +218,8 @@ $(function () {
             }
             if (destination.index == 2) {
                 console.log('세 번째 섹션이 화면에 들어옵니다!')
+                let x2y2vid = document.getElementById('x2y2')
+                x2y2vid.play()
             }
             if (destination.index == 3) {
                 console.log('project1 섹션이 화면에 들어옵니다!')
