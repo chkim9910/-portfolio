@@ -44,7 +44,7 @@ $(function () {
 
                 // Set tweens
                 TweenMax.set([line1, box], {
-                    x: -15,
+                    x: -20,
                 })
                 TweenMax.set([line1Spans, nameBox, subTxtBox], {
                     alpha: 0,
@@ -56,7 +56,7 @@ $(function () {
                 })
 
                 tl.add(
-                    TweenMax.to(line1, 1.5, {
+                    TweenMax.to(line1, 2.5, {
                         x: 0,
                     }),
                     'start'
@@ -72,7 +72,7 @@ $(function () {
                 tl.add(
                     TweenMax.staggerTo(
                         line1Spans,
-                        1,
+                        0.5,
                         {
                             alpha: 1,
                         },
