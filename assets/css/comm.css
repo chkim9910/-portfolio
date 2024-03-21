@@ -290,6 +290,10 @@ legend {
 
 a {
   cursor: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 body {
@@ -297,17 +301,24 @@ body {
   font-family: "Pretendard Variable", "Noto Sans KR", sans-serif;
 }
 
-#flag {
+#menu {
   position: fixed;
-  left: 0;
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
   top: 0;
-  z-index: 999999999999;
-  pointer-events: none;
+  margin: 0;
+  z-index: 9;
 }
-
-#flag > div {
-  width: 100px;
-  height: 80px;
+#menu .menu-box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+#menu .menu-el {
+  padding: 20px;
 }
 
 .section {
@@ -341,6 +352,7 @@ body {
 .sect7 .inner {
   display: flex;
   align-items: center;
+  overflow: visible;
 }
 .sect3 .wrapper,
 .sect4 .wrapper,

@@ -290,6 +290,8 @@ legend {
 
 a {
   cursor: none;
+  width: fit-content;
+  height: fit-content;
 }
 
 body {
@@ -297,17 +299,24 @@ body {
   font-family: "Pretendard Variable", "Noto Sans KR", sans-serif;
 }
 
-#flag {
+#menu {
   position: fixed;
-  left: 0;
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
   top: 0;
-  z-index: 999999999999;
-  pointer-events: none;
+  margin: 0;
+  z-index: 9;
 }
-
-#flag > div {
-  width: 100px;
-  height: 80px;
+#menu .menu-box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+#menu .menu-el {
+  padding: 20px;
 }
 
 .section {
@@ -376,8 +385,7 @@ body {
   color: transparent;
   background-size: 200%;
   background: url(../img/OAK3ZD0.jpg) no-repeat 0 60%;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   animation: oscillate 3s linear 1s infinite alternate-reverse;
 }
 .sect3 .line-1,
@@ -692,9 +700,8 @@ strong.circle:before {
 .sect1 .tit {
   width: 100%;
   color: transparent;
-  background: url(../img/5160549.jpg) no-repeat 50% 50%/100%;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg) no-repeat 50% 50%/100%;
+  background-clip: text;
   animation: gradient-animation 16s ease-in-out infinite alternate;
   left: 0;
 }
@@ -851,7 +858,6 @@ strong.circle:before {
   background: #000;
 }
 .sect2 .inner {
-  min-height: -moz-fit-content;
   min-height: fit-content;
   display: flex;
   justify-content: space-between;
@@ -1243,8 +1249,7 @@ strong.circle:before {
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .sect7 .cont {
   display: flex;
