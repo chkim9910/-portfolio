@@ -968,6 +968,17 @@ strong.circle:before {
   height: 100%;
   left: 0px;
 }
+.sect3 #x2y2 {
+  position: absolute;
+  z-index: 3;
+  top: 21%;
+  height: 540px;
+}
+@media screen and (max-width: 1600px) {
+  .sect3 #x2y2 {
+    height: 470px;
+  }
+}
 .sect3 .mob {
   position: absolute;
   bottom: 30px;
