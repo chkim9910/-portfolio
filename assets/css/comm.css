@@ -320,6 +320,7 @@ body {
   max-height: 700px;
   margin: 0 auto;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .line {
@@ -677,22 +678,24 @@ strong.circle:before {
   position: relative;
   display: flex;
 }
+.sect1 .inner {
+  display: flex;
+  align-items: center;
+}
 .sect1 .title {
   position: relative;
-  top: 100px;
   right: 0;
   width: 100%;
   height: 454px;
   z-index: 10;
 }
 .sect1 .tit {
+  width: 100%;
   color: transparent;
   background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg) no-repeat 50% 50%/100%;
   -webkit-background-clip: text;
           background-clip: text;
   animation: gradient-animation 16s ease-in-out infinite alternate;
-  position: absolute;
-  top: 116px;
   left: 0;
 }
 .sect1 .tit span {
@@ -734,25 +737,25 @@ strong.circle:before {
   width: 800px;
   display: flex;
   justify-content: space-between;
-  margin-top: 3.612vw;
   position: relative;
   z-index: 20;
 }
 .sect1 .name-upper {
   color: #292021;
   font-size: 19px;
-  line-height: 40px;
-  letter-spacing: 19px;
+  line-height: 30px;
+  letter-spacing: 16px;
   text-transform: uppercase;
   font-weight: 500;
 }
 .sect1 .name {
   color: #292021;
-  font-size: 55px;
+  font-size: 50px;
   line-height: 60px;
   font-weight: 600;
 }
 .sect1 .copyright {
+  display: none;
   color: #292021;
   line-height: 18px;
   font-size: 14px;
@@ -782,13 +785,13 @@ strong.circle:before {
 }
 .sect1 .line-box {
   height: 160px;
-  width: 50%;
+  width: 46%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .sect1 .line-box .line {
-  width: 181px;
+  width: 164px;
   height: 1px;
   background: #292021;
 }
@@ -797,6 +800,7 @@ strong.circle:before {
   font-size: 25px;
   font-weight: 700;
   z-index: 0;
+  transform: translateY(-10px);
 }
 .sect1 .line-1 {
   top: 750px;
@@ -820,6 +824,26 @@ strong.circle:before {
 .sect1 .em-bee,
 .sect1 .em-beetle {
   font-size: 45px;
+}
+.sect1 .bg {
+  position: absolute;
+  bottom: 0;
+  height: 38%;
+  width: 23%;
+}
+.sect1 .bg-1 {
+  right: 0;
+}
+.sect1 .bg-2 {
+  display: none;
+  right: 0;
+  height: 12%;
+  width: 10%;
+}
+.sect1 .bg-3 {
+  display: none;
+  left: 30%;
+  height: 13%;
 }
 
 .sect2 {
