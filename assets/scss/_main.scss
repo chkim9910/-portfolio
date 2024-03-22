@@ -21,6 +21,7 @@
     height: 280px;
     // -webkit-text-stroke: 2px $primary;
     // color: transparent;
+    // background: url(../img/5160549.jpg) no-repeat 50% 50% / 100%;
     // background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg)
     //   no-repeat 50% 50% / 100%;
     // background-clip: text;
@@ -327,19 +328,22 @@
     // width: 100%;
   }
   .profile {
-    height: 80svh;
-    background: url(../img/deco/2x/2x/me@2x.png) no-repeat 0 0 / contain;
+    height: 85svh;
+    background: url(../img/deco/2x/2x/me4@2x.png) no-repeat 0 0 / contain;
   }
   .txt-box {
-    flex: 1;
+    flex: 1.3;
+    position: relative;
+    opacity: 0;
   }
   .hello {
     font-family: "Gowun Dodum", sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
+    font-weight: 800;
+    font-size: 90px;
   }
   .desc {
+    width: 700px;
     font-family: "Gowun Dodum", sans-serif;
     font-style: normal;
     font-size: 18px;
@@ -349,6 +353,26 @@
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
+  }
+  .deco {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 35%;
+  }
+  #flower {
+    // display: none;
+    width: 50%;
+    animation: rotate 10s infinite linear;
+  }
+  @keyframes rotate {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
   }
 
   // .txt-fst {
@@ -424,6 +448,55 @@
   // .bg-circle-bk {
   //   background: $black;
   // }
+}
+.sect2-2 {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cont-box {
+    opacity: 0;
+    display: flex;
+    padding-top: 100px;
+    // align-items: center;
+  }
+  h2,
+  li {
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  }
+  h2 {
+    display: flex;
+    gap: 5px;
+    border-bottom: 1px solid rgb(40, 31, 32, 0.3);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  li {
+    font-size: 20px;
+  }
+  .flower {
+    animation: rotate 10s infinite linear;
+  }
+  .edu {
+    flex: 1;
+  }
+  .skills {
+    flex: 1;
+  }
+
+  .software,
+  .design {
+    display: flex;
+    gap: 8px;
+  }
+  .contact {
+    flex: 0.5;
+  }
 }
 .sect3 {
   // background: #00e0ff;
@@ -676,7 +749,7 @@
     // gap: 40px;
   }
   .tit-box {
-    display: flex;
+    // display: flex;
     align-items: flex-end;
     gap: 20px;
     // justify-content: space-evenly;
@@ -721,7 +794,7 @@
   .name {
     font-size: 20px;
     // font-size: 37px;
-    color: $white;
+    color: $secondary2;
     margin-bottom: 20px;
   }
   .addr-box {
@@ -729,22 +802,24 @@
     margin-bottom: 10px;
   }
   .addr {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
+    font-weight: 700;
     font-size: 50px;
     // font-size: 70px;
     letter-spacing: -2.2px;
-    color: $white;
+    color: $secondary2;
   }
   .gotoaddr {
-    color: $secondary;
+    color: $secondary2;
     font-size: 40px;
   }
   .txt {
     font-size: 16px;
-    color: $white;
+    color: $secondary2;
     // margin-bottom: 10px;
     strong {
-      color: $secondary;
+      color: $secondary2;
     }
     span {
       display: block;
@@ -753,7 +828,7 @@
   .intro {
     width: 600px;
     font-size: 16px;
-    color: $secondary;
+    color: $secondary2;
     word-break: keep-all;
   }
 }

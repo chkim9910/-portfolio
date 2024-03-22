@@ -14,12 +14,12 @@ $(function () {
 
     navigationTooltips: [
       "",
-      "intro",
+      "",
+      "",
       "project 1",
       "project 2",
       "project 3",
       "project 4",
-      "contact",
     ],
     showActiveTooltip: true,
     navigation: true,
@@ -35,7 +35,7 @@ $(function () {
     recordHistory: true,
 
     // page setting
-    anchors: ["sect1", "sect2", "sect3", "sect4", "sect5", "sect6", "sect7"],
+    anchors: ["sect1", "sect2", "sect2-2", "sect3", "sect4", "sect5", "sect6"],
     menu: "#menu",
     css3: true,
 
@@ -73,7 +73,7 @@ $(function () {
         tl.add(
           TweenMax.staggerTo(
             line1Spans,
-            2,
+            1.3,
             {
               alpha: 1,
             },
@@ -82,7 +82,7 @@ $(function () {
           "start"
         );
         tl.add(
-          TweenMax.to(box, 1, {
+          TweenMax.to(box, 1.5, {
             x: 0,
           }),
           "start"
@@ -94,11 +94,13 @@ $(function () {
         );
         tl.add(
           TweenMax.staggerTo(subTxtBox, 1, { x: 10, alpha: 1 }, 0.1),
-          "start + 0.5"
+          "start + 1"
         );
       }
       if (destination.index == 1) {
         console.log("두 번째 섹션이 화면에 들어옵니다!");
+        gsap.set($(".txt-box"), { x: 100, opacity: 0 });
+        gsap.to($(".txt-box"), { x: 0, opacity: 1, duration: 1.2, scrub: 0.2 });
         // 함수 호출
         // typingAni();
         // function typingAni() {
@@ -161,12 +163,23 @@ $(function () {
         // }
       }
       if (destination.index == 2) {
-        console.log("세 번째 섹션이 화면에 들어옵니다!");
+        // console.log("세 번째 섹션이 화면에 들어옵니다!");
+        gsap.set($(".cont-box"), { x: -100, opacity: 0 });
+        gsap.to($(".cont-box"), {
+          x: 0,
+          opacity: 1,
+          duration: 1.5,
+          scrub: 0.2,
+        });
+      }
+
+      if (destination.index == 3) {
+        // console.log("세 번째 섹션이 화면에 들어옵니다!");
         let x2y2vid = document.getElementById("x2y2");
         x2y2vid.play();
       }
-      if (destination.index == 3) {
-        console.log("project1 섹션이 화면에 들어옵니다!");
+      if (destination.index == 4) {
+        // console.log("project1 섹션이 화면에 들어옵니다!");
         let vid = document.getElementById("chVideo");
         vid.play();
       }

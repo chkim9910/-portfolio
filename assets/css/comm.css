@@ -417,6 +417,7 @@ body {
 .sect5 .line-1,
 .sect6 .line-1,
 .sect7 .line-1 {
+  display: none;
   top: 160px;
   left: 0;
 }
@@ -955,19 +956,22 @@ strong.circle:before {
   flex: 1;
 }
 .sect2 .profile {
-  height: 80svh;
-  background: url(../img/deco/2x/2x/me@2x.png) no-repeat 0 0/contain;
+  height: 85svh;
+  background: url(../img/deco/2x/2x/me4@2x.png) no-repeat 0 0/contain;
 }
 .sect2 .txt-box {
-  flex: 1;
+  flex: 1.3;
+  position: relative;
+  opacity: 0;
 }
 .sect2 .hello {
   font-family: "Gowun Dodum", sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 60px;
+  font-weight: 800;
+  font-size: 90px;
 }
 .sect2 .desc {
+  width: 700px;
   font-family: "Gowun Dodum", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -977,6 +981,70 @@ strong.circle:before {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
+}
+.sect2 .deco {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 35%;
+}
+.sect2 #flower {
+  width: 50%;
+  animation: rotate 10s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.sect2-2 .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sect2-2 .cont-box {
+  opacity: 0;
+  display: flex;
+  padding-top: 100px;
+}
+.sect2-2 h2,
+.sect2-2 li {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.sect2-2 h2 {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid rgba(40, 31, 32, 0.3);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 700;
+}
+.sect2-2 li {
+  font-size: 20px;
+}
+.sect2-2 .flower {
+  animation: rotate 10s infinite linear;
+}
+.sect2-2 .edu {
+  flex: 1;
+}
+.sect2-2 .skills {
+  flex: 1;
+}
+.sect2-2 .software,
+.sect2-2 .design {
+  display: flex;
+  gap: 8px;
+}
+.sect2-2 .contact {
+  flex: 0.5;
 }
 
 .sect3 {
@@ -1281,7 +1349,6 @@ strong.circle:before {
   position: relative;
 }
 .sect7 .tit-box {
-  display: flex;
   align-items: flex-end;
   gap: 20px;
   margin-bottom: 50px;
@@ -1319,7 +1386,7 @@ strong.circle:before {
 }
 .sect7 .name {
   font-size: 20px;
-  color: #fff;
+  color: rgb(40, 31, 32);
   margin-bottom: 20px;
 }
 .sect7 .addr-box {
@@ -1327,21 +1394,23 @@ strong.circle:before {
   margin-bottom: 10px;
 }
 .sect7 .addr {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
+  font-weight: 700;
   font-size: 50px;
   letter-spacing: -2.2px;
-  color: #fff;
+  color: rgb(40, 31, 32);
 }
 .sect7 .gotoaddr {
-  color: #efdbb4;
+  color: rgb(40, 31, 32);
   font-size: 40px;
 }
 .sect7 .txt {
   font-size: 16px;
-  color: #fff;
+  color: rgb(40, 31, 32);
 }
 .sect7 .txt strong {
-  color: #efdbb4;
+  color: rgb(40, 31, 32);
 }
 .sect7 .txt span {
   display: block;
@@ -1349,6 +1418,6 @@ strong.circle:before {
 .sect7 .intro {
   width: 600px;
   font-size: 16px;
-  color: #efdbb4;
+  color: rgb(40, 31, 32);
   word-break: keep-all;
 }/*# sourceMappingURL=comm.css.map */
