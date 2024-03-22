@@ -504,7 +504,8 @@
   // background: $black;
   .half-bg {
     @include halfBg;
-    background: #000;
+    // background: $primary2;
+    // background: #000;
   }
   // .web {
   //   @include web;
@@ -568,7 +569,7 @@
   // background: #b91550;
   .half-bg {
     @include halfBg;
-    background: #000;
+    // background: #000;
     width: 55%;
   }
   .web {
