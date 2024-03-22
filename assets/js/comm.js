@@ -98,9 +98,14 @@ $(function () {
         );
       }
       if (destination.index == 1) {
-        console.log("두 번째 섹션이 화면에 들어옵니다!");
-        gsap.set($(".txt-box"), { x: 100, opacity: 0 });
-        gsap.to($(".txt-box"), { x: 0, opacity: 1, duration: 1.2, scrub: 0.2 });
+        // console.log("두 번째 섹션이 화면에 들어옵니다!");
+        gsap.set($(".sect2 .txt-box"), { x: 100, opacity: 0 });
+        gsap.to($(".sect2 .txt-box"), {
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
+          scrub: 0.2,
+        });
         // 함수 호출
         // typingAni();
         // function typingAni() {
@@ -164,8 +169,8 @@ $(function () {
       }
       if (destination.index == 2) {
         // console.log("세 번째 섹션이 화면에 들어옵니다!");
-        gsap.set($(".cont-box"), { x: -100, opacity: 0 });
-        gsap.to($(".cont-box"), {
+        gsap.set($(".sect2-2 .cont-box"), { x: -100, opacity: 0 });
+        gsap.to($(".sect2-2 .cont-box"), {
           x: 0,
           opacity: 1,
           duration: 1.5,
