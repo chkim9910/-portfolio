@@ -343,10 +343,11 @@
     font-size: 90px;
   }
   .desc {
-    width: 700px;
+    width: 650px;
     font-family: "Gowun Dodum", sans-serif;
     font-style: normal;
-    font-size: 18px;
+    font-size: 16px;
+    word-break: keep-all;
   }
   .point {
     font-family: "Gowun Dodum", sans-serif;
