@@ -20,11 +20,12 @@
     width: 100%;
     height: 280px;
     // -webkit-text-stroke: 2px $primary;
-    color: transparent;
-    background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg)
-      no-repeat 50% 50% / 100%;
-    background-clip: text;
-    animation: gradient-animation 16s ease-in-out infinite alternate;
+    // color: transparent;
+    // background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg)
+    //   no-repeat 50% 50% / 100%;
+    // background-clip: text;
+    // animation: gradient-animation 16s ease-in-out infinite alternate;
+    color: $secondary2;
     // line-height: 86%;
     // position: absolute;
     // top: 116px;
@@ -32,6 +33,8 @@
     // top: 120px;
     left: 0;
     span {
+      font-family: "Gowun Dodum", sans-serif;
+      font-style: normal;
       display: inline-block;
       height: 100%;
       font-size: 220px;
@@ -100,8 +103,14 @@
     letter-spacing: 14px;
     text-transform: uppercase;
     font-weight: 500;
+    i {
+      font-family: "Gowun Dodum", sans-serif;
+      font-style: normal;
+    }
   }
   .name {
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
     color: $secondary2;
     font-size: 45px;
     line-height: 60px;
@@ -174,6 +183,8 @@
   }
 
   .sub-txt {
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
     color: $secondary2;
     // line-height: 25px;
     font-size: 25px;
@@ -208,6 +219,7 @@
     font-size: 45px;
   }
   .bg {
+    display: none;
     position: absolute;
     bottom: 0;
     height: 38%;
@@ -229,6 +241,39 @@
     left: 30%;
     height: 13%;
   }
+  .bg-flower {
+    position: absolute;
+    bottom: -40px;
+    // right: 10px;
+    width: 500px;
+    height: 600px;
+    // background: url(../img/deco/2x/2x/flower@2x.png) no-repeat 0 0 / 100%;
+    // background: url(../img/deco/2x/2x/flower@2x.png) no-repeat 0 0 / 100%;
+    animation: flower 3s linear infinite alternate-reverse;
+  }
+  .bg-hand {
+    position: absolute;
+    bottom: -40px;
+    right: 50px;
+    // right: -30px;
+    width: 500px;
+    height: 1080px;
+    transform: rotate(-90deg);
+    // width: 400px;
+    // height: 620px;
+    background: url(../img/deco/2x/2x/flower-hand@2x.png) no-repeat 0 0 / 100%;
+    // background: url(../img/deco/2x/2x/ok@2x.png) no-repeat 0 0 / 100%;
+    // background: url(../img/deco/2x/2x/flower@2x.png) no-repeat 0 0 / 100%;
+    // animation: flower 3s linear infinite alternate-reverse;
+  }
+  @keyframes flower {
+    0% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(5deg);
+    }
+  }
   .stack {
     position: absolute;
     bottom: 0;
@@ -240,6 +285,8 @@
     overflow-x: hidden;
   }
   .cont {
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
     font-size: 18px;
     font-weight: 700;
     white-space: nowrap;
@@ -257,108 +304,126 @@
 }
 .sect2 {
   display: flex;
-  background: $black;
+  background: $primary2;
   // background: url(../../assets/img/3d-abstract-space-sky-with-stars-nebula.jpg)
   //   no-repeat 50% 0 / cover;
 
   .inner {
     // max-width: 100vw;
-    min-height: fit-content;
+    // min-height: fit-content;
     // min-height: 100vh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     // flex-direction: column;
     // justify-content: center;
-    align-items: flex-end;
+    // align-items: flex-end;
     position: relative;
   }
-  .txt-fst {
-    display: inline;
-    font-size: 45px;
-    font-weight: 800;
-    text-align: center;
-    color: $white;
-    position: relative;
-    // .black {
-    //   color: $black;
-    // }
+  .profile-box {
+    height: 100%;
+    flex: 1;
+    // height: 100svh;
+    // width: 100%;
   }
-  .next {
-    position: absolute;
-    top: 50px;
-    left: 153px;
+  .profile {
+    height: 80svh;
+    background: url(../img/deco/2x/2x/me@2x.png) no-repeat 0 0 / contain;
   }
-  .next-after {
-    position: absolute;
-    top: 0;
-    right: 355px;
+  .txt-box {
+    flex: 1;
   }
-  .txt-sec-box {
-    text-align: left;
-    // margin-top: 50px;
-    z-index: 10;
-    span {
-      font-size: 36px;
-      font-weight: 400;
-      // color: $white;
-      color: $secondary;
-      line-height: 1.4;
-      letter-spacing: -3px;
-      // line-height: 1.2;
-      opacity: 0;
-    }
+  .hello {
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
   }
-  .txt-tit {
-    line-height: 0.9;
-    opacity: 0;
-    span {
-      font-size: 100px;
-      font-weight: 700;
-      color: $primary;
-      letter-spacing: 7px;
-      opacity: 0;
-    }
+  .desc {
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+  }
+  .point {
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
   }
 
-  // .txt-sec {
-  //   font-size: 35px;
-  //   font-weight: 500;
-  //   color: $secondary;
-  //   line-height: 1.3;
-  //   // font-weight: 800;
-  //   // color: transparent;
-  //   // background: url(../img/5160549.jpg) no-repeat 100% 10% / 100%;
-  //   // background-clip: text;
-  //   // animation: gradient-animation2 16s ease-in-out infinite alternate;
-  //   // color: $black;
+  // .txt-fst {
+  //   display: inline;
+  //   font-size: 45px;
+  //   font-weight: 800;
+  //   text-align: center;
+  //   color: $white;
+  //   position: relative;
+  //   // .black {
+  //   //   color: $black;
+  //   // }
   // }
-  @keyframes gradient-animation2 {
-    0% {
-      background-position: 100% 50%;
-    }
-    50% {
-      background-position: 50% 30%;
-    }
-    100% {
-      background-position: 30% 80%;
-    }
-  }
-
-  #type-text {
-    color: $white;
-  }
-  .bg-circle {
-    position: absolute;
-    bottom: -100px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: $primary;
-  }
-  .bg-circle-bk {
-    background: $black;
-  }
+  // .next {
+  //   position: absolute;
+  //   top: 50px;
+  //   left: 153px;
+  // }
+  // .next-after {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 355px;
+  // }
+  // .txt-sec-box {
+  //   text-align: left;
+  //   // margin-top: 50px;
+  //   z-index: 10;
+  //   span {
+  //     font-size: 36px;
+  //     font-weight: 400;
+  //     // color: $white;
+  //     color: $secondary;
+  //     line-height: 1.4;
+  //     letter-spacing: -3px;
+  //     // line-height: 1.2;
+  //     opacity: 0;
+  //   }
+  // }
+  // .txt-tit {
+  //   line-height: 0.9;
+  //   opacity: 0;
+  //   span {
+  //     font-size: 100px;
+  //     font-weight: 700;
+  //     color: $primary;
+  //     letter-spacing: 7px;
+  //     opacity: 0;
+  //   }
+  // }
+  // @keyframes gradient-animation2 {
+  //   0% {
+  //     background-position: 100% 50%;
+  //   }
+  //   50% {
+  //     background-position: 50% 30%;
+  //   }
+  //   100% {
+  //     background-position: 30% 80%;
+  //   }
+  // }
+  // #type-text {
+  //   color: $white;
+  // }
+  // .bg-circle {
+  //   position: absolute;
+  //   bottom: -100px;
+  //   left: -50px;
+  //   width: 100px;
+  //   height: 100px;
+  //   border-radius: 50%;
+  //   background: $primary;
+  // }
+  // .bg-circle-bk {
+  //   background: $black;
+  // }
 }
 .sect3 {
   // background: #00e0ff;

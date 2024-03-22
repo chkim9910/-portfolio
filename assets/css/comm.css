@@ -283,10 +283,7 @@ legend {
 
 * {
   cursor: none;
-  font-family: "Gowun Dodum", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(40, 31, 32);
+  font-family: "Noto Sans", sans-serif;
 }
 
 a {
@@ -308,7 +305,6 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 60px;
-  background-color: transparent;
   top: 0;
   margin: 0;
   z-index: 9;
@@ -320,14 +316,15 @@ body {
   width: 100%;
 }
 #menu .menu-el-box {
-  background: #faf2e5;
   transition: all 0.3s;
 }
 #menu .menu-el-box :hover {
-  background: rgb(248, 227, 194);
+  background: #f8e3c2;
 }
 #menu .menu-el {
-  padding: 16px;
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
+  padding: 20px 28px;
   font-size: 20px;
   font-weight: 600;
 }
@@ -338,6 +335,8 @@ body {
   justify-content: flex-end;
 }
 #menu .copyright-el {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
   font-size: 18px;
   font-weight: 600;
 }
@@ -725,14 +724,12 @@ strong.circle:before {
 .sect1 .tit {
   width: 100%;
   height: 280px;
-  color: transparent;
-  background: url(../img/3d-abstract-space-sky-with-stars-nebula.jpg) no-repeat 50% 50%/100%;
-  -webkit-background-clip: text;
-          background-clip: text;
-  animation: gradient-animation 16s ease-in-out infinite alternate;
+  color: rgb(40, 31, 32);
   left: 0;
 }
 .sect1 .tit span {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
   display: inline-block;
   height: 100%;
   font-size: 220px;
@@ -784,7 +781,13 @@ strong.circle:before {
   text-transform: uppercase;
   font-weight: 500;
 }
+.sect1 .name-upper i {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
+}
 .sect1 .name {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
   color: rgb(40, 31, 32);
   font-size: 45px;
   line-height: 60px;
@@ -832,6 +835,8 @@ strong.circle:before {
   background: rgb(40, 31, 32);
 }
 .sect1 .sub-txt {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
   color: rgb(40, 31, 32);
   font-size: 25px;
   font-weight: 700;
@@ -862,6 +867,7 @@ strong.circle:before {
   font-size: 45px;
 }
 .sect1 .bg {
+  display: none;
   position: absolute;
   bottom: 0;
   height: 38%;
@@ -882,6 +888,30 @@ strong.circle:before {
   left: 30%;
   height: 13%;
 }
+.sect1 .bg-flower {
+  position: absolute;
+  bottom: -40px;
+  width: 500px;
+  height: 600px;
+  animation: flower 3s linear infinite alternate-reverse;
+}
+.sect1 .bg-hand {
+  position: absolute;
+  bottom: -40px;
+  right: 50px;
+  width: 500px;
+  height: 1080px;
+  transform: rotate(-90deg);
+  background: url(../img/deco/2x/2x/flower-hand@2x.png) no-repeat 0 0/100%;
+}
+@keyframes flower {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
 .sect1 .stack {
   position: absolute;
   bottom: 0;
@@ -893,6 +923,8 @@ strong.circle:before {
   overflow-x: hidden;
 }
 .sect1 .cont {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
   font-size: 18px;
   font-weight: 700;
   white-space: nowrap;
@@ -910,82 +942,41 @@ strong.circle:before {
 
 .sect2 {
   display: flex;
-  background: #000;
+  background: #faf2e5;
 }
 .sect2 .inner {
-  min-height: -moz-fit-content;
-  min-height: fit-content;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 }
-.sect2 .txt-fst {
-  display: inline;
-  font-size: 45px;
-  font-weight: 800;
-  text-align: center;
-  color: #fff;
-  position: relative;
+.sect2 .profile-box {
+  height: 100%;
+  flex: 1;
 }
-.sect2 .next {
-  position: absolute;
-  top: 50px;
-  left: 153px;
+.sect2 .profile {
+  height: 80svh;
+  background: url(../img/deco/2x/2x/me@2x.png) no-repeat 0 0/contain;
 }
-.sect2 .next-after {
-  position: absolute;
-  top: 0;
-  right: 355px;
+.sect2 .txt-box {
+  flex: 1;
 }
-.sect2 .txt-sec-box {
-  text-align: left;
-  z-index: 10;
-}
-.sect2 .txt-sec-box span {
-  font-size: 36px;
-  font-weight: 400;
-  color: #efdbb4;
-  line-height: 1.4;
-  letter-spacing: -3px;
-  opacity: 0;
-}
-.sect2 .txt-tit {
-  line-height: 0.9;
-  opacity: 0;
-}
-.sect2 .txt-tit span {
-  font-size: 100px;
+.sect2 .hello {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
   font-weight: 700;
-  color: #fe3f72;
-  letter-spacing: 7px;
-  opacity: 0;
+  font-size: 60px;
 }
-@keyframes gradient-animation2 {
-  0% {
-    background-position: 100% 50%;
-  }
-  50% {
-    background-position: 50% 30%;
-  }
-  100% {
-    background-position: 30% 80%;
-  }
+.sect2 .desc {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
+  font-size: 18px;
 }
-.sect2 #type-text {
-  color: #fff;
-}
-.sect2 .bg-circle {
-  position: absolute;
-  bottom: -100px;
-  left: -50px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #fe3f72;
-}
-.sect2 .bg-circle-bk {
-  background: #000;
+.sect2 .point {
+  font-family: "Gowun Dodum", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .sect3 {

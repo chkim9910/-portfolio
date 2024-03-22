@@ -2,10 +2,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 * {
   cursor: none;
-  font-family: "Gowun Dodum", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: $secondary2;
+  font-family: "Noto Sans", sans-serif;
+  // color: $secondary2;
 }
 a {
   cursor: none;
@@ -24,7 +22,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 60px;
-  background-color: transparent;
+  // background: #faf2e5;
   top: 0;
   margin: 0;
   z-index: 9;
@@ -36,14 +34,16 @@ body {
     width: 100%;
   }
   .menu-el-box {
-    background: #faf2e5;
+    // background: #faf2e5;
     transition: all 0.3s;
     :hover {
-      background: rgb(248, 227, 194);
+      background: #f8e3c2;
     }
   }
   .menu-el {
-    padding: 16px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
+    padding: 20px 28px;
     font-size: 20px;
     font-weight: 600;
   }
@@ -54,6 +54,8 @@ body {
     justify-content: flex-end;
   }
   .copyright-el {
+    font-family: "Gowun Dodum", sans-serif;
+    font-style: normal;
     font-size: 18px;
     font-weight: 600;
   }
@@ -169,6 +171,7 @@ body {
     flex-direction: column;
     justify-content: start;
     color: $white;
+
     // background: rgb(0, 0, 0, 0.05);
     // backdrop-filter: blur(5px);
   }
