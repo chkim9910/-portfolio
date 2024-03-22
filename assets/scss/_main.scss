@@ -5,6 +5,7 @@
   .inner {
     display: flex;
     align-items: center;
+    overflow: visible;
   }
   .title {
     position: relative;
@@ -17,6 +18,8 @@
     z-index: 10;
   }
   .tit {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 280px;
     // -webkit-text-stroke: 2px $primary;
@@ -243,6 +246,7 @@
     height: 13%;
   }
   .bg-flower {
+    display: none;
     position: absolute;
     bottom: -40px;
     // right: 10px;
@@ -254,15 +258,18 @@
   }
   .bg-hand {
     position: absolute;
-    bottom: -40px;
-    right: 50px;
-    // right: -30px;
-    width: 500px;
+    bottom: -219px;
+    right: -13%;
+    width: 540px;
+    // bottom: -220px;
+    // right: -15%;
+    // width: 465px;
+    // right: -4%;
+    // width: 470px;
     height: 1080px;
     transform: rotate(-90deg);
-    // width: 400px;
-    // height: 620px;
-    background: url(../img/deco/2x/2x/flower-hand@2x.png) no-repeat 0 0 / 100%;
+    background: url(../img/deco/2x/2x/hand\ with\ floewr@2x.png) no-repeat 0 0 /
+      100%;
     // background: url(../img/deco/2x/2x/ok@2x.png) no-repeat 0 0 / 100%;
     // background: url(../img/deco/2x/2x/flower@2x.png) no-repeat 0 0 / 100%;
     // animation: flower 3s linear infinite alternate-reverse;
